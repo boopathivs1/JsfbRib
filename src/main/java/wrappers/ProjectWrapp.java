@@ -19,6 +19,7 @@ import org.testng.annotations.Test;
 
 import utils.DataInputProvider;
 import utils.Dataproviders;
+import utils.Datats;
 
 public class ProjectWrapp extends GenericWrappers{
 
@@ -104,33 +105,11 @@ public void beforeMethods(String Browser) throws IOException{
 	public void afterTest(){
 		unloadObjects();
 	}
-	
-	
-/*	
-	@AfterMethod(groups={"common"})
-	public void afterMethod() throws InterruptedException{
-try{
-		defaultcontent();
-logout(LogoutStatus,usertype);	
-		endTestcase();
-//	closeAllBrowsers();
-	closeBrowser();
-	reportStep("Application has logged out Successfully", "PASS");
 
-	
-}
-catch (Exception e) {
-	reportStep("Application has not logged out Successfully", "FAIL");
-
-	// TODO: handle exception
-}
-
-	
-	
+	@DataProvider(name="data")
+	public Object[][] getDatasExcel() throws IOException{
+		return Datats.getAllSheetData("./data/"+dataSheetName+".xlsx",testKeyword);	
 	}
-	*/
-	
-	
 	
 	
 	
@@ -161,35 +140,15 @@ catch (Exception e) {
 		return Dataproviders.geta("./data/"+dataSheet+".xlsx",testKeyword);		
 	}	
 	
-public void logout() throws InterruptedException{
-	loadtime();
-//	Thread.sleep(4000);
-
-	defaultcontent();
-	loadtime();
-//	pageScrollup();
+public void logout(Boolean frameMode) throws InterruptedException{
 	
-	//window.scrollTo(0,document.body.scrollHeight)
-	//scrolltoelementJs(prop.getProperty("click.dashboard.icon.xpath"));	
-	//Scrollup();
-//	Thread.sleep(4000);
-clickByXpathExplict(prop.getProperty("click.dashboard.icon.xpath"));
-	//Thread.sleep(5000);
-	loadtime();
-	clickByXpathExplict(prop.getProperty("click.dashboard.icon.xpath"));
 	
-loadtime();
-//	defaultcontent();
-	//Thread.sleep(3000);
-	clickByXpathExplict(prop.getProperty("click.logout.button.xpath"));
 	loadtime();
-//	clickByXpathExplict(prop.getProperty("click.logout.button.xpath"));
-
-	//Thread.sleep(4000);
-	clickByXpathExplict(prop.getProperty("click.confirm.logout.button.xpath"));	
-	
-	Thread.sleep(3000);
-
+	if(frameMode)
+	{
+	locateFrameById("canvas");
+}
+clickByXpathExplict(prop.getProperty("click.logout.xpath"));
 
 }
 	
