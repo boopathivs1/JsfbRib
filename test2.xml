@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test name="Test" thread-count="1" parallel="false">
+    <classes> 
+  
+      <class name="testcases.Tc_93"/>
+      <class name="testcases.Tc_94"/>
+      <class name="testcases.Tc_95"/>
+      <class name="testcases.Tc_96"/>
+      <class name="testcases.Tc_97"/>
+      <class name="testcases.Tc_98"/>
+      <class name="testcases.Tc_99"/>
+      <class name="testcases.Tc_100"/>
+      <class name="testcases.Tc_101"/>
+      <class name="testcases.Tc_102"/>
+      <class name="testcases.Tc_103"/>
+     
+   <class name="testcases.Tc_104"/>
+      <class name="testcases.Tc_105"/>
+      <class name="testcases.Tc_106"/>
+      <class name="testcases.Tc_107"/>
+      <class name="testcases.Tc_108"/>
+      <class name="testcases.Tc_109"/>
+      <class name="testcases.Tc_110"/>
+      <class name="testcases.Tc_111"/>
+      <class name="testcases.Tc_112"/>
+      <class name="testcases.Tc_113"/>
+      <class name="testcases.Tc_114"/>
+      <class name="testcases.Tc_115"/>
+      <class name="testcases.Tc_116"/>
+      <class name="testcases.Tc_117"/>
+      <class name="testcases.Tc_118"/>
+      <class name="testcases.Tc_119"/>
+    
+      <class name="testcases.Tc_120"/>
+    
+   <class name="testcases.Tc_121"/>
+      <class name="testcases.Tc_122"/> 
+
+
+      <class name="testcases.Tc_14"/>
+      
+
+
+ 
+ 
+
+      <class name="testcases.Tc_17"/>
+
+
+      <class name="testcases.Tc_18"/>
+
+
+
+      <class name="testcases.Tc_22"/>
+     
+
+
+    <class name="testcases.Tc_100"/>
+      <class name="testcases.Tc_106"/>
+        <class name="testcases.Tc_26"/>
+
+   <class name="testcases.Tc_31"/>
+     
+           <class name="testcases.Tc_41"/>
+      <class name="testcases.Tc_46"/>
+  
+              </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
