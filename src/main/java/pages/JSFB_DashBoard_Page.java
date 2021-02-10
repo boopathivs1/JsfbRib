@@ -16,9 +16,59 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 		locateFrameById("canvas");
 	     clickByXpathExplict(prop.getProperty("click.overview.button.xpath"));
 
-	 
 		return this;
 	}
+	
+	
+	public JSFB_ServicePage clickServices() throws InterruptedException{
+		locateFrameById("canvas");
+	     clickByXpathExplict(prop.getProperty("click.services.xpath"));
+
+		return new JSFB_ServicePage(driver,test);
+	}
+	
+	
+	
+	public JSFB_DashBoard_Page ClickFD() throws InterruptedException{
+	
+	     clickByXpathExplict(prop.getProperty("click.FD.xpath"));
+		return this;
+	}
+	
+	
+	public JSFB_DashBoard_Page ClickLoan() throws InterruptedException{
+		
+		pageScroll();
+		
+	     clickByXpathExplict(prop.getProperty("click.Loan.xpath"));
+		return this;
+	}
+	
+	public JSFB_DashBoard_Page ClickRD() throws InterruptedException{
+		
+	     clickByXpathExplict(prop.getProperty("click.RD.xpath"));
+		return this;
+	}
+	
+	
+	
+	public JSFB_DashBoard_Page verifyFDSummary() throws InterruptedException{
+	
+	 VerifyElementPresent(prop.getProperty("click.accSummary.xpath"),"Fixed Deposit summary has been displaying","Fixed Deposit summary has not been displaying");
+		return this;
+		}
+	
+	public JSFB_DashBoard_Page verifyRDSummary() throws InterruptedException{
+		
+		 VerifyElementPresent(prop.getProperty("click.accSummary.xpath"),"Recurring Deposit summary has been displaying","Recurring Deposit summary has not been displaying");
+			return this;
+			}
+	
+	public JSFB_DashBoard_Page verifyLoanSummary() throws InterruptedException{
+		
+		 VerifyElementPresent(prop.getProperty("click.accSummary.xpath"),"Loan summary has been displaying","Loan summary has not been displaying");
+			return this;
+			}
 	
 	
 	public JSFB_DashBoard_Page verifyStatement(String accno,String Month) throws InterruptedException{
