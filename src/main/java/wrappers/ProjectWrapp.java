@@ -19,7 +19,6 @@ import org.testng.annotations.Test;
 
 import utils.DataInputProvider;
 import utils.Dataproviders;
-import utils.Datats;
 
 public class ProjectWrapp extends GenericWrappers{
 
@@ -31,7 +30,6 @@ public class ProjectWrapp extends GenericWrappers{
 	public static String logpwd=null; 
 	
 	
-	public String dataSheet="Brac";
 	
 	 
 	 public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
@@ -106,10 +104,7 @@ public void beforeMethods(String Browser) throws IOException{
 		unloadObjects();
 	}
 
-	@DataProvider(name="data")
-	public Object[][] getDatasExcel() throws IOException{
-		return Datats.getAllSheetData("./data/"+dataSheetName+".xlsx",testKeyword);	
-	}
+
 	
 	
 	
@@ -137,7 +132,7 @@ public void beforeMethods(String Browser) throws IOException{
 	
 	@DataProvider(name="fetch")
 	public Object[][] getDataExcel() throws IOException{
-		return Dataproviders.geta("./data/"+dataSheet+".xlsx",testKeyword);		
+		return Dataproviders.geta("./data/"+dataSheetName+".xlsx",testKeyword);		
 	}	
 	
 public void logout(Boolean frameMode) throws InterruptedException{

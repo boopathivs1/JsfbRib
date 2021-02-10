@@ -18,6 +18,7 @@ public class JSFB_LoginPage extends ProjectWrapp{
      enterByXpathExplict(prop.getProperty("enter.captcha.xpath"),captcha);
      clickByXpathExplict(prop.getProperty("click.loginbutton.xpath"));
      
+
 	 return new JSFB_DashBoard_Page(driver, test);
 	 
  }
