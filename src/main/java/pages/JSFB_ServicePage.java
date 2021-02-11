@@ -27,6 +27,7 @@ enterByXpathExplict(prop.getProperty("enter.confiememail.xpath"),Email);
 clickByXpathExplict(prop.getProperty("click.submit.xpath"));
 		return this;
 	}
+	
 	public JSFB_ServicePage SubmitOTP(String OTP) throws InterruptedException{
 	     
 		enterByXpathExplict(prop.getProperty("enter.otp.xpath"),OTP);
