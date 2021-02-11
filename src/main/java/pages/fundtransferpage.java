@@ -21,6 +21,17 @@ public class fundtransferpage  extends ProjectWrapp{
 	}	
 	
 	
+	public JanaBank_AddPayee clickjanabank() throws InterruptedException{
+		
+	     clickByXpathExplict(prop.getProperty("click.janapayee.xpath"));
+
+		return new JanaBank_AddPayee(driver, test);
+	}	
+	
+	
+	
+	
+	
 	
 	
 	

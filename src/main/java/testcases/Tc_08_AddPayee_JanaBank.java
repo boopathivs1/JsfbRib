@@ -24,14 +24,16 @@ public class Tc_08_AddPayee_JanaBank  extends ProjectWrapp {
 
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void DEpositOverview(String casename,String Username,String Password,String captcha,String OTP,String Email,String param2,String param3,String param4,String param5,String param6,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+	public void DEpositOverview(String casename,String Username,String Password,String captcha,String accno,String nickname,String otp,String param3,String param4,String param5,String param6,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
 	try{	
 	new JSFB_LoginPage(driver, test)
 	.loginApplication(Username, Password, captcha)
-	.clickServices()
-	.clickUpdateEmail()
-	.FillEmailForm(Email)
-	.SubmitOTP(OTP);
+	.clickOverviewButton()
+	.clickfundtrans()
+	.clickaddpayeemenu()
+	.clickjanabank()
+	.filljanabankpayee(accno,nickname,otp);
+	
 	logout(false);
 	}
 catch (Exception e) {
