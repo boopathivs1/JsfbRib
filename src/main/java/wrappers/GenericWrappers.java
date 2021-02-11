@@ -4559,9 +4559,9 @@ System.out.println(xpath2);
 			FileUtils.copyFile(driver.getScreenshotAs(OutputType.FILE) , new File("./reports/images/"+number+".jpg"));
 			
 		} catch (WebDriverException e) {
-			reportStep("The browser has been closed.", "FAIL");
+			reportStep("The browser has been closed.", "INFO");
 		} catch (IOException e) {
-			reportStep("The snapshot could not be taken", "FAIL");
+			reportStep("The snapshot could not be taken", "INFO");
 		}
 		return number;
 	}

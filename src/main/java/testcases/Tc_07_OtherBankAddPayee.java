@@ -24,7 +24,8 @@ public class Tc_07_OtherBankAddPayee  extends ProjectWrapp {
 
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void DEpositOverview(String casename,String Username,String Password,String captcha,String accno,String ifsccode,String acctype,String firstname,String nickname,String otp,String mobno,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+	public void DEpositOverview(String casename,String Username,String Password,String captcha,String otp,String accno,
+			String ifsccode,String acctype,String firstname,String nickname,String mobno,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
 	try{	
 	
 		
