@@ -13,10 +13,17 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 	}
 
 	public JSFB_DashBoard_Page clickOverviewButton() throws InterruptedException{
-		locateFrameById("canvas");
+	
 	     clickByXpathExplict(prop.getProperty("click.overview.button.xpath"));
 
 		return this;
+	}
+	
+	
+	public JSFB_DashBoard_Page locatingFrames() throws InterruptedException{
+		
+	locateFrameById("canvas");
+	return this;
 	}
 	
 	public fundtransferpage clickfundtrans() throws InterruptedException{
@@ -25,6 +32,16 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 
 		return new fundtransferpage(driver, test);
 	}
+	
+	
+			public fundtransferpage clickintiatetrans() throws InterruptedException{
+		
+	     clickByXpathExplict(prop.getProperty("intiate.trans.link.xpath"));
+
+		return new fundtransferpage(driver, test);
+	}
+				
+	
 	
 	public JSFB_ServicePage clickServices() throws InterruptedException{
 		locateFrameById("canvas");

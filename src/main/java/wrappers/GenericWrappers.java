@@ -2300,6 +2300,11 @@ element.click();
 	}
 
 	
+public void submitOtp(String otp) throws InterruptedException{
+	enterByXpathExplict(prop.getProperty("enter.otp.xpath"),otp);
+	clickByXpathExplict(prop.getProperty("click.submitotp.xpath"));
+	}
+	
 	
 	public void verifyElementpresentByXpathExplicitw(String xpath){
 		try {
