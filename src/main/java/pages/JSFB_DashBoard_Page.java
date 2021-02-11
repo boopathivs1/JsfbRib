@@ -19,6 +19,12 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 		return this;
 	}
 	
+	public fundtransferpage clickfundtrans() throws InterruptedException{
+		
+	     clickByXpathExplict(prop.getProperty("click.fundtransmenu.xpath"));
+
+		return new fundtransferpage(driver, test);
+	}
 	
 	public JSFB_ServicePage clickServices() throws InterruptedException{
 		locateFrameById("canvas");
