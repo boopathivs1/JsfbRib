@@ -12,13 +12,13 @@ import wrappers.ProjectWrapp;
 public class Tc_08_AddPayee_JanaBank  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC06";
-		testDescription="Update Email";
+		testCaseName="TC08";
+		testDescription="AddPayee JanaBank";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC06";
+		testKeyword="TC08";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 

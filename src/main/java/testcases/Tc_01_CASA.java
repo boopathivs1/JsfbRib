@@ -31,9 +31,6 @@ public class Tc_01_CASA  extends ProjectWrapp {
 	.loginApplication(Username, Password, captcha)
 	.clickOverviewButton()
 	.verifyaccSummary();
-	
-	
-	
 	logout(false);
 	}
 catch (Exception e) {
