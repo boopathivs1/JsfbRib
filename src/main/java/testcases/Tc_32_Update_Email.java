@@ -9,31 +9,35 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.JSFB_LoginPage;
 import wrappers.ProjectWrapp;
-public class Tc_12_ForgotPassword  extends ProjectWrapp {
+public class Tc_32_Update_Email  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC12";
-		testDescription="ForgotPassword";
+		testCaseName="TC32";
+		testDescription="Update Email";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC12";
+		testKeyword="TC32";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void DEpositOverview(String casename,String Crnno,String pin,String captcha,String accno,String accid,String amount,String remarks,String otp,String param5,String param6,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+	public void DEpositOverview(String casename,String Username,String Password,String captcha,String OTP,String Email,String param2,String param3,String param4,String param5,String param6,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
 	try{	
 	new JSFB_LoginPage(driver, test)
-	.clickForgotPassword()
-	.clickCrn()
-	.FillForgotPwdForm(Crnno, pin);
-	
+	.loginApplication(Username, Password, captcha)
+	.clickServices()
+	.clickUpdateEmail()
+	.FillEmailForm(Email)
+	.SubmitOTP(OTP);
+	logout(false);
 	}
 catch (Exception e) {
 	logout(false);
+	throw new Exception();
+
 }	
 
 	}

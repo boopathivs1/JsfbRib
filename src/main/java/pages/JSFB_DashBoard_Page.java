@@ -14,7 +14,7 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 
 	public JSFB_DashBoard_Page clickOverviewButton() throws InterruptedException{
 	
-		locateFrameById("canvas");
+		
 	     clickByXpathExplict(prop.getProperty("click.overview.button.xpath"));
 
 		return this;
@@ -30,12 +30,40 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 	return this;
 	}
 	
+	public JSFB_DashBoard_Page FillFavTransForm(String Payee,String accno,String MOde,String amount,String Remarks) throws InterruptedException{
+		
+		String accnum= regvalue(accno);
+		String amt= regvalue(amount);
+	
+		clickByXpath(prop.getProperty("click.dropdown.payee.xpath"));
+		clickByXpath("//div[contains(text(),'"+Payee+"')]");
+		clickByXpath(prop.getProperty("click.dropdown.account.xpath"));
+		clickByXpath("//div[.='"+accnum+"']");
+		clickByXpath(prop.getProperty("click.dropdown.mode.xpath"));
+		clickByXpath("//div[contains(text(),'"+MOde+"')]");
+		enterByXpathExplict(prop.getProperty("enter.fav.amount.xpath"), amt);
+		enterByXpathExplict(prop.getProperty("enter.fav.remarks.xpath"), Remarks);
+		clickByXpathExplict(prop.getProperty("click.button.paynow.xpath"));
+		
+		clickByXpathExplict(prop.getProperty("click.ownacc.confirm.submit.xpath"));
+		submitOtp("1111");
+		return this;
+		}
+	
+	
+	public loanspage clickloanlink() throws InterruptedException{
+		
+	     clickByXpathExplict(prop.getProperty("click.loanmenulink.xpath"));
+
+		return new loanspage(driver, test);
+	}
 	public fundtransferpage clickfundtrans() throws InterruptedException{
 	
 	     clickByXpathExplict(prop.getProperty("click.fundtransmenu.xpath"));
 
 		return new fundtransferpage(driver, test);
-	}
+	}	
+	
 	
 	
 

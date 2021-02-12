@@ -9,37 +9,37 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.JSFB_LoginPage;
 import wrappers.ProjectWrapp;
-public class Tc_02_ViewStatement  extends ProjectWrapp {
+public class Tc_06_Favourite_Transaction  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC11";
-		testDescription="Login to Application";
+		testCaseName="TC06";
+		testDescription="Favourite_Transaction";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
-		authors="Boopathi";
-		testKeyword="TC11";
+		authors="Sreejith";
+		testKeyword="TC06";
 		LogoutStatus=true;	
 		usertype="CIBUser";
-	}
 
-	
+	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void checkAccSummary(String casename,String Username,String Password,String captcha,String otp,String accno,String month,String param3,String param4,String param5,String param6,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
-	
-		String accnum=regvalue(accno);
+	public void DEpositOverview(String casename,String Username,String Password,String captcha,String Payee,String accno,String Mode,String amount,String remarks,String otp,String param6,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
 		try{	
+
 	new JSFB_LoginPage(driver, test)
 	.loginApplication(Username, Password, captcha)
-	.clickOverviewButton()
-	.verifyStatement(accnum,month);
-	
-	
-	
+	.locatingFrames()
+	.FillFavTransForm(Payee,accno,Mode,amount,remarks);
 	
 	logout(false);
 	}
 catch (Exception e) {
 	logout(false);
 }	
-}}
+
+	}
+	
+	
+	
+	}

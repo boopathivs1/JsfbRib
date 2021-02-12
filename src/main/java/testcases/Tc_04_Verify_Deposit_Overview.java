@@ -12,7 +12,7 @@ import wrappers.ProjectWrapp;
 public class Tc_04_Verify_Deposit_Overview  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC06";
+		testCaseName="TC04";
 		testDescription="Verify Deposit Overview";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
@@ -38,6 +38,8 @@ public class Tc_04_Verify_Deposit_Overview  extends ProjectWrapp {
 	}
 catch (Exception e) {
 	logout(false);
+	throw new Exception();
+
 }	
 
 	}

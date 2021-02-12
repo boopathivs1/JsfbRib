@@ -4237,6 +4237,12 @@ public void dropdownSelection(String xpath1,String xpath2) throws InterruptedExc
 
 }
 
+public void Selectdropdown(String xpath,String value) throws InterruptedException{ 
+	clickByXpathExplict("//div[@class='ui dropdown selection']");
+	selectVisibileTextByXPath(xpath, value);
+
+}
+
 
 
 public void dropdowncitySelection(String xpath1,String xpath2) throws InterruptedException{ 
@@ -4422,7 +4428,9 @@ System.out.println(xpath2);
 
 	public void selectVisibileTextByXPath(String xpath, String value) {
 		try{
-			new Select(driver.findElement(By.xpath(xpath))).selectByVisibleText(value);;
+			new Select(driver.findElement(By.xpath(xpath))).selectByVisibleText(value);
+			System.out.println("start");
+			System.out.println(driver.findElement(By.xpath(xpath)).isDisplayed()+"value is displaying");
 			reportStep("The element with xpath: "+xpath+" is selected with value :"+value, "PASS");
 		} 
 		
@@ -4553,9 +4561,7 @@ System.out.println(xpath2);
 
 	}
 
-	
-
-	@Override
+	/*@Override
 	public long takeSnap(){
 		long number = (long) Math.floor(Math.random() * 900000000L) + 10000000L; 
 		try {
@@ -4564,15 +4570,15 @@ System.out.println(xpath2);
 			FileUtils.copyFile(driver.getScreenshotAs(OutputType.FILE) , new File("./reports/images/"+number+".jpg"));
 			
 		} catch (WebDriverException e) {
-			reportStep("The browser has been closed.", "INFO");
+		//	reportStep("The snapshot could not be taken.", "INFO");
 		} catch (IOException e) {
-			reportStep("The snapshot could not be taken", "INFO");
+		//	reportStep("The snapshot could not be taken", "INFO");
 		}
 		return number;
 	}
-
+*/
 	
-/*		
+		
 	
 	@Override
 	public long takeSnap() {
@@ -4605,7 +4611,7 @@ catch (IOException e) {
 	}
 
 
-*/
+
 
 	public void firstwindow(String primarywindow){
 		try{

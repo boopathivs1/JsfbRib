@@ -9,16 +9,16 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.JSFB_LoginPage;
 import wrappers.ProjectWrapp;
-public class Tc_11_Register  extends ProjectWrapp {
+public class Tc_1_Register  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC11";
+		testCaseName="TC1";
 		testDescription="Register";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC11";
+		testKeyword="TC1";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 

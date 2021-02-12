@@ -9,16 +9,16 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.JSFB_LoginPage;
 import wrappers.ProjectWrapp;
-public class Tc_08_Own_Transfer  extends ProjectWrapp {
+public class Tc_12_Own_Transfer  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC08";
+		testCaseName="TC12";
 		testDescription="Own Account Transfer";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
-		authors="Sreejith";
-		testKeyword="TC08";
+		authors="Boopathi";
+		testKeyword="TC12";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 
@@ -52,6 +52,8 @@ public class Tc_08_Own_Transfer  extends ProjectWrapp {
 	}
 catch (Exception e) {
 	logout(false);
+	throw new Exception();
+
 }	
 
 	}

@@ -9,37 +9,36 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.JSFB_LoginPage;
 import wrappers.ProjectWrapp;
-public class Tc_06_Update_Email  extends ProjectWrapp {
+public class Tc_03_CASA  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC06";
-		testDescription="Update Email";
+		testCaseName="TC03";
+		testDescription="Login to Application and verify CASA overview";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
-		authors="Sreejith";
-		testKeyword="TC06";
+		authors="Boopathi";
+		testKeyword="TC03";
 		LogoutStatus=true;	
 		usertype="CIBUser";
-
 	}
+
+	
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void DEpositOverview(String casename,String Username,String Password,String captcha,String OTP,String Email,String param2,String param3,String param4,String param5,String param6,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+	public void checkAccSummary(String casename,String Username,String Password,String captcha,String otp,String param1,String param2,String param3,String param4,String param5,String param6,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
 	try{	
 	new JSFB_LoginPage(driver, test)
 	.loginApplication(Username, Password, captcha)
-	.clickServices()
-	.clickUpdateEmail()
-	.FillEmailForm(Email)
-	.SubmitOTP(OTP);
+	.clickOverviewButton()
+	.verifyaccSummary();
+	
+	
+	
 	logout(false);
 	}
 catch (Exception e) {
 	logout(false);
-}	
+	throw new Exception();
 
-	}
-	
-	
-	
-	}
+}	
+}}
