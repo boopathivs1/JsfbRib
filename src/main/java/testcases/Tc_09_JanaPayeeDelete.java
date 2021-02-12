@@ -9,35 +9,38 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.JSFB_LoginPage;
 import wrappers.ProjectWrapp;
-public class Tc_07_OtherBankAddPayee  extends ProjectWrapp {
+public class Tc_09_JanaPayeeDelete  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC07";
-		testDescription="Other Bank Add Payee";
+		testCaseName="TC09";
+		testDescription="Jana Delete Payee";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC07";
+		testKeyword="TC09";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void DEpositOverview(String casename,String Username,String Password,String captcha,String otp,String accno,
-			String ifsccode,String acctype,String firstname,String nickname,String mobno,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+	public void DEpositOverview(String casename,String Username,String Password,String captcha,String otp,String janaPayeeNickname,
+			String params0,String params1,String params2,String params3,String params4,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
 	
-		System.out.println(accno);
-		System.out.println(ifsccode);
+		
 		try{	
 	 new JSFB_LoginPage(driver, test)
 	.loginApplication(Username, Password, captcha)
 	.locatingFrames()
 	.clickfundtrans()
-	.clickaddpayeemenu()
-	.clickotherpayee()
-	.fillotherpayee(accno, ifsccode, acctype, firstname, nickname, mobno, otp)
-	.logout(false);
+	.clickmanagepayee()
+	.clickjanabankpayee(janaPayeeNickname)
+	.clickotherpayeeDelete();
+	
+	
+	
+	
+		logout(false);
 	
 	
 	
@@ -46,6 +49,8 @@ public class Tc_07_OtherBankAddPayee  extends ProjectWrapp {
 	}
 catch (Exception e) {
 	logout(false);
+	throw new Exception();
+
 }	
 
 	}

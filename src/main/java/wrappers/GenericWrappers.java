@@ -4551,9 +4551,7 @@ System.out.println(xpath2);
 
 	}
 
-	
-
-	@Override
+	/*@Override
 	public long takeSnap(){
 		long number = (long) Math.floor(Math.random() * 900000000L) + 10000000L; 
 		try {
@@ -4562,15 +4560,15 @@ System.out.println(xpath2);
 			FileUtils.copyFile(driver.getScreenshotAs(OutputType.FILE) , new File("./reports/images/"+number+".jpg"));
 			
 		} catch (WebDriverException e) {
-			reportStep("The browser has been closed.", "INFO");
+		//	reportStep("The snapshot could not be taken.", "INFO");
 		} catch (IOException e) {
-			reportStep("The snapshot could not be taken", "INFO");
+		//	reportStep("The snapshot could not be taken", "INFO");
 		}
 		return number;
 	}
-
+*/
 	
-/*		
+		
 	
 	@Override
 	public long takeSnap() {
@@ -4603,7 +4601,7 @@ catch (IOException e) {
 	}
 
 
-*/
+
 
 	public void firstwindow(String primarywindow){
 		try{

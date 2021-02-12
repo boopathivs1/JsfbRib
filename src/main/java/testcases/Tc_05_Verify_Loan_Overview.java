@@ -36,6 +36,8 @@ public class Tc_05_Verify_Loan_Overview  extends ProjectWrapp {
 	}
 catch (Exception e) {
 	logout(false);
+	throw new Exception();
+
 }	
 
 	}

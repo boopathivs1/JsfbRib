@@ -26,12 +26,19 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 	return this;
 	}
 	
+	public loanspage clickloanlink() throws InterruptedException{
+		
+	     clickByXpathExplict(prop.getProperty("click.loanmenulink.xpath"));
+
+		return new loanspage(driver, test);
+	}
 	public fundtransferpage clickfundtrans() throws InterruptedException{
 		
 	     clickByXpathExplict(prop.getProperty("click.fundtransmenu.xpath"));
 
 		return new fundtransferpage(driver, test);
-	}
+	}	
+	
 	
 	
 			public fundtransferpage clickintiatetrans() throws InterruptedException{

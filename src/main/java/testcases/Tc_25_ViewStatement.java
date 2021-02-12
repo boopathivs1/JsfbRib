@@ -9,16 +9,16 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.JSFB_LoginPage;
 import wrappers.ProjectWrapp;
-public class Tc_02_ViewStatement  extends ProjectWrapp {
+public class Tc_25_ViewStatement  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC11";
-		testDescription="Login to Application";
+		testCaseName="TC25";
+		testDescription="Verify View Statement";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC11";
+		testKeyword="TC25";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 	}
@@ -41,5 +41,7 @@ public class Tc_02_ViewStatement  extends ProjectWrapp {
 	}
 catch (Exception e) {
 	logout(false);
+	throw new Exception();
+
 }	
 }}
