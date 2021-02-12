@@ -20,6 +20,7 @@ public class fundtransferpage  extends ProjectWrapp{
 		return this;
 	}	
 	
+
 	public JSFB_JanabankTransferPage clickInitiatetrans() throws InterruptedException{
 		
 	     clickByXpathExplict(prop.getProperty("click.initiate.tran.xpath"));
@@ -36,6 +37,15 @@ public class fundtransferpage  extends ProjectWrapp{
 	}	
 	
 	
+
+	public OwnAcctransfer clickintiatelink() throws InterruptedException{
+		
+	     clickByXpathExplict(prop.getProperty("intiate.trans.link.xpath"));
+
+		return new OwnAcctransfer(driver, test);
+	}	
+		
+
 	
 	
 	

@@ -6,21 +6,18 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import wrappers.ProjectWrapp;
 
-public class JSFB_OtherbankTransferPage extends ProjectWrapp{
-	public  JSFB_OtherbankTransferPage(RemoteWebDriver driver, ExtentTest test){
+public class OwnAcctransfer extends ProjectWrapp{
+	public  OwnAcctransfer(RemoteWebDriver driver, ExtentTest test){
 		this.driver = driver;
 		this.test = test;
 	}
-	
-	
-	
-	
-	
-	public JSFB_OtherbankTransferPage submitOtherbankAccForm(String accno,String accid,String amount,String remarks) throws InterruptedException{
+
+	public OwnAcctransfer submitOwnAccForm(String amount,String remarks,String accno,String accid) throws InterruptedException{
 		String amt=regvalue(amount);
 		String accnum=regvalue(accno);
 		String accidnum=regvalue(accid);
 
+		clickByXpathExplict(prop.getProperty("click.ownacc.jana.links.xpath"));
 		clickByXpathExplict(".//td[text()='"+accnum+"']//preceding::a[@id='"+accidnum+"']");
 
 		AccountBalance=getTextByXpath(prop.getProperty("getbalance.xpath"));
@@ -37,10 +34,9 @@ submitOtp("1111");
 	     return this;
 	
 	}
-	
-		 
- }
- 	
+				
 	
 	
-
+	
+		
+}

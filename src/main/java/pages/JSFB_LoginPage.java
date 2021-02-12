@@ -24,8 +24,20 @@ public class JSFB_LoginPage extends ProjectWrapp{
  }
  
  
+
+	public PreLoginPage clickRegister() throws InterruptedException{
+		
+	     clickByXpathExplict(prop.getProperty("click.register.xpath"));
+
+		return new PreLoginPage (driver,test);
+	}
  
- 
+	public PreLoginPage clickForgotPassword() throws InterruptedException{
+		
+	     clickByXpathExplict(prop.getProperty("click.forgotpwd.xpath"));
+
+		return new PreLoginPage (driver,test);
+	}
  
  
  	

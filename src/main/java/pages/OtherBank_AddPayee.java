@@ -16,8 +16,10 @@ public class OtherBank_AddPayee  extends ProjectWrapp{
 
 		String accnum=regvalue(accno);
 		String otpnum=regvalue(otp);
+
 		
 	
+
 		clickByXpathExplict(prop.getProperty("enter.otheraccno.xpath"));
 		enterByXpathExplict(prop.getProperty("enter.otheraccno.xpath"),accnum);
 		enterByXpathExplict(prop.getProperty("enter.otherConfirmaccno.xpath"),accnum);
