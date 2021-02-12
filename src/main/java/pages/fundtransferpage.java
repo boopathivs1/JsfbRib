@@ -20,6 +20,13 @@ public class fundtransferpage  extends ProjectWrapp{
 		return this;
 	}	
 	
+	public JSFB_JanabankTransferPage clickInitiatetrans() throws InterruptedException{
+		
+	     clickByXpathExplict(prop.getProperty("click.initiate.tran.xpath"));
+
+		return new JSFB_JanabankTransferPage(driver, test);
+	}
+	
 	
 	public JanaBank_AddPayee clickjanabank() throws InterruptedException{
 		
