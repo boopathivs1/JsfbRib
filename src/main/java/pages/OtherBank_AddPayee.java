@@ -75,7 +75,9 @@ selectVisibileTextByXPath(prop.getProperty("select.acctype.xpath"),acctype);
 	
 		}
 
-
+	
+	
+	
 	
 	public OtherBank_AddPayee  verifyOtherPayeeAdded(String otherpayeenickname) throws InterruptedException{
 		

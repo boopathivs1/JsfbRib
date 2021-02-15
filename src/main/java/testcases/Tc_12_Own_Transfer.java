@@ -26,7 +26,7 @@ public class Tc_12_Own_Transfer  extends ProjectWrapp {
 	@Test(groups={"sanity"},dataProvider="fetch")
 	public void DEpositOverview(String casename,String Username,String Password,String captcha,String otp,
 			String amount,
-			String remarks,String toaccno,String accid,String fromacc,String mobno,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+			String remarks,String toaccno,String accid,String fromacc,String amountRange,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
 	
 		System.out.println(toaccno);
 		try{	
@@ -38,7 +38,15 @@ public class Tc_12_Own_Transfer  extends ProjectWrapp {
 	.locatingFrames()
 	.clickfundtrans()
 	.clickintiatelink()
-	.submitOwnAccForm(amount, remarks, toaccno, accid,fromacc)
+	//.submitOwnAccForm(amount, remarks, toaccno, accid,fromacc)
+	//.otpVerify(otp)
+	//.clickOkTransfer()
+	.clickTransferHistory()
+	.filterTransHistory(fromacc, amountRange)
+	
+	
+	
+	
 	.logout(false);
 	
 	
