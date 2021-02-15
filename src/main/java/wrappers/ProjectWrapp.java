@@ -138,6 +138,9 @@ public void logout(Boolean frameMode) throws InterruptedException{
 	
 	
 	loadtime();
+
+
+	loadtime();
 	if(frameMode)
 	{
 	locateFrameById("canvas");

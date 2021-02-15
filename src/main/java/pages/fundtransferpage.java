@@ -15,7 +15,7 @@ public class fundtransferpage  extends ProjectWrapp{
 	
 	public fundtransferpage clickaddpayeemenu() throws InterruptedException{
 		
-	     clickByXpathExplict(prop.getProperty("click.addpayeemenu.xpath"));
+	   clickByXpathExplict(prop.getProperty("click.addpayeemenu.xpath"));
 
 		return this;
 	}	
@@ -59,8 +59,22 @@ public class fundtransferpage  extends ProjectWrapp{
 	     
 		return this;
 	}				
+public fundtransferpage verifyBeneficiaryDeletion(String otherpayeenickname) throws InterruptedException{
+
+VerifyElementnotPresent("(.//input[contains(@value,'EXTSUBMOD~"+otherpayeenickname+"')]//following::label)[1]","Beneficiary has deleted successfully","Beneficiary has not deleted successfully");
+	     
+	     
+		return this;
+	}				
 	
 	
+public fundtransferpage verifyJanaBeneficiaryDeletion(String otherpayeenickname) throws InterruptedException{
+
+VerifyElementnotPresent("(.//table[@aria-describedby='DataTables_Table_1_info']//input[contains(@value,'~Active~"+otherpayeenickname+"')]/following::label)[1]","Beneficiary has deleted successfully","Beneficiary has not deleted successfully");
+	     
+	     
+		return this;
+	}			
 	
 	public fundtransferpage clickotherpayeeDelete() throws InterruptedException{
 	     clickByXpathExplict(prop.getProperty("click.manage.delete.payee.xpath"));
@@ -70,8 +84,13 @@ public class fundtransferpage  extends ProjectWrapp{
 		}				
 		
 	
-	
-	
+	public fundtransferpage clickDeleteOtherConfirm() throws InterruptedException{
+	     clickByXpathExplict(prop.getProperty("click.otherbank.deleteconfirm.xpath"));
+	 	
+		
+	return this;
+}				
+
 
 	public JSFB_JanabankTransferPage clickInitiatetrans() throws InterruptedException{
 		
@@ -106,7 +125,7 @@ public class fundtransferpage  extends ProjectWrapp{
 	
 	public OtherBank_AddPayee clickotherpayee() throws InterruptedException{
 		
-	     clickByXpathExplict(prop.getProperty("click.otherpayee.xpath"));
+//	     clickByXpathExplict(prop.getProperty("click.otherpayee.xpath"));
 
 		return new OtherBank_AddPayee(driver, test);
 	}	
