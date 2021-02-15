@@ -24,14 +24,15 @@ public class Tc_1_Register  extends ProjectWrapp {
 
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void DEpositOverview(String casename,String Crnno,String pin,String captcha,String accno,String accid,String amount,String remarks,String otp,String param5,String param6,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+	public void DEpositOverview(String casename,String Crnno,String pin,String username,String pwd,String OTP,String amount,String remarks,String otp,String param5,String param6,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
 	try{	
 	new JSFB_LoginPage(driver, test)
 	.clickRegister()
 	.clickCrn()
-	.FillRegisterForm(Crnno, pin);
-	
-	
+	.FillRegisterForm(Crnno, pin)
+	.FillUserForm(username,pwd)
+	.SubmitOTP(OTP)
+	.VerifyUserRegistration();
 	}
 catch (Exception e) {
 	logout(false);

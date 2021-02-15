@@ -33,6 +33,33 @@ public class PreLoginPage  extends ProjectWrapp{
 
 		return this;
 	}
+	public PreLoginPage SubmitOTP(String OTP) throws InterruptedException{
+	     
+		enterByXpathExplict(prop.getProperty("enter.otp.xpath"),OTP);
+	
+		clickByXpathExplict(prop.getProperty("click.otp.submit.xpath"));
+				return this;
+			}
+	
+	public PreLoginPage VerifyUserRegistration() throws InterruptedException{
+		 
+		VerifyElementPresent(prop.getProperty("verify.user.registration.xpath"),"user has updated successfully","user is not registered");
+
+				return this;
+			}
+	
+	
+	public PreLoginPage FillUserForm(String Username,String pwd) throws InterruptedException{
+		
+		
+		enterByXpathExplict(prop.getProperty("enter.register.username.xpath"),Username);
+		enterByXpathExplict(prop.getProperty("enter.register.pwd.xpath"),pwd);
+		enterByXpathExplict(prop.getProperty("enter.confirmpwd.xpath"),pwd);
+		 clickByXpathExplict(prop.getProperty("click.agreeterms.checkbox.xpath"));
+		 clickByXpathExplict(prop.getProperty("click.register.submit.xpath"));
+
+		return this;
+	}
 	
 public PreLoginPage FillForgotPwdForm(String Crnno,String pin) throws InterruptedException{
 		
