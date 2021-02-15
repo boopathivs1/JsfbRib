@@ -138,15 +138,15 @@ public void logout(Boolean frameMode) throws InterruptedException{
 	
 	
 	loadtime();
-
-
+	loadtime();
+	loadtime();
 	loadtime();
 	if(frameMode)
 	{
 	locateFrameById("canvas");
 }
-clickByXpathExplict(prop.getProperty("click.logout.xpath"));
-
+//clickByXpathExplict(prop.getProperty("click.logout.xpath"));
+doubleclickByXpathExplict(prop.getProperty("click.logout.xpath"));
 }
 	
 

@@ -2165,7 +2165,8 @@ element.click();
 			
 			action.doubleClick(element).perform();
 			
-		
+			reportStep("The element with xpath: "+xpathVal+" could be clicked", "PASS");
+			
 		} 
 		
 		
