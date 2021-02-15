@@ -47,7 +47,7 @@ return this;
 
 	}
 
-		
+	
 		verifyNottextmatches(AccountBalance,finalAccountBalance,"Balance has been deducted in Account Balance","Balance has not been deducted in Account Balance");
 	
 
