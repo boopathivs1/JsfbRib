@@ -137,9 +137,9 @@ public void beforeMethods(String Browser) throws IOException{
 public void logout(Boolean frameMode) throws InterruptedException{
 	
 	
-	loadtime();
-	loadtime();
-	loadtime();
+//	loadtime();
+//	loadtime();
+//	loadtime();
 	loadtime();
 	if(frameMode)
 	{
