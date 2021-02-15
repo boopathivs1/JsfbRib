@@ -31,6 +31,7 @@ public class Tc_25_ViewStatement  extends ProjectWrapp {
 		try{	
 	new JSFB_LoginPage(driver, test)
 	.loginApplication(Username, Password, captcha)
+	.locatingFrames()
 	.clickOverviewButton()
 	.verifyStatement(accnum,month);
 	logout(false);

@@ -38,16 +38,19 @@ public class Tc_12_Own_Transfer  extends ProjectWrapp {
 	.locatingFrames()
 	.clickfundtrans()
 	.clickintiatelink()
-	//.submitOwnAccForm(amount, remarks, toaccno, accid,fromacc)
+	.submitOwnAccForm(amount, remarks, toaccno, accid,fromacc)
 	//.otpVerify(otp)
 	//.clickOkTransfer()
 	.clickTransferHistory()
 	.filterTransHistory(fromacc, amountRange)
+	.verifyHistoryAmount(amount)
+	.clickAccountMenu()
+	.verifyBalanceDeduction(fromacc);
 	
 	
 	
 	
-	.logout(false);
+	logout(false);
 	
 	
 	
