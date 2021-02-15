@@ -61,6 +61,15 @@ public class PreLoginPage  extends ProjectWrapp{
 		return this;
 	}
 	
+
+	public PreLoginPage VerifyPasswordUpdate() throws InterruptedException{
+	 
+		VerifyElementPresent(prop.getProperty("verify.passwordUpdate.xpath"),"Password has updated successfully","Password is not updated");
+
+				return this;
+			}
+	
+	
 public PreLoginPage FillForgotPwdForm(String Crnno,String pin) throws InterruptedException{
 		
 		String Crnnumber=regvalue(Crnno);
@@ -72,4 +81,16 @@ public PreLoginPage FillForgotPwdForm(String Crnno,String pin) throws Interrupte
 
 		return this;
 	}
+
+
+public PreLoginPage setpassword(String Pwd,String captcha) throws InterruptedException{
+	
+	enterByXpathExplict(prop.getProperty("enter.forgotpwd.xpath"),Pwd);
+	enterByXpathExplict(prop.getProperty("enter.confirm.forgotpwd.xpath"),Pwd);
+     scrolltoelementJs(prop.getProperty("enter.captcha.xpath"));
+	 enterByXpathExplict(prop.getProperty("enter.captcha.xpath"),captcha);
+	 clickByXpathExplict(prop.getProperty("click.securelogin.xpath"));
+
+	return this;
+}
 	}

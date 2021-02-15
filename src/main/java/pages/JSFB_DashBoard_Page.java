@@ -37,8 +37,10 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 	
 		clickByXpath(prop.getProperty("click.dropdown.payee.xpath"));
 		clickByXpath("//div[contains(text(),'"+Payee+"')]");
+		Thread.sleep(2000);
 		clickByXpath(prop.getProperty("click.dropdown.account.xpath"));
 		clickByXpath("//div[.='"+accnum+"']");
+		Thread.sleep(2000);
 		clickByXpath(prop.getProperty("click.dropdown.mode.xpath"));
 		clickByXpath("//div[contains(text(),'"+MOde+"')]");
 		enterByXpathExplict(prop.getProperty("enter.fav.amount.xpath"), amt);
