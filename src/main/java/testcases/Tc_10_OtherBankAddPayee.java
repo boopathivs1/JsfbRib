@@ -36,7 +36,11 @@ public class Tc_10_OtherBankAddPayee  extends ProjectWrapp {
 	.clickfundtrans()
 	.clickaddpayeemenu()
 	.clickotherpayee()
-	.fillotherpayee(accno, ifsccode, acctype, firstname, nickname, mobno, otp)
+	.fillotherpayee(accno, ifsccode, acctype, firstname, nickname, mobno)
+	.enterOtp(otp)
+	.verifyOtherPayee()
+	.verifyOtherPayeeAdded(nickname)
+	
 	.logout(false);
 	
 	

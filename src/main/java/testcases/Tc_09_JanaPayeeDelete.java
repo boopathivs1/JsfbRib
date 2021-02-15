@@ -35,12 +35,16 @@ public class Tc_09_JanaPayeeDelete  extends ProjectWrapp {
 	.clickfundtrans()
 	.clickmanagepayee()
 	.clickjanabankpayee(janaPayeeNickname)
-	.clickotherpayeeDelete();
+	.clickotherpayeeDelete()
+	.clickmanagepayee()
+	//.clickotherbankpayee()
+	.verifyJanaBeneficiaryDeletion(janaPayeeNickname);
 	
 	
 	
 	
-		logout(false);
+	
+		logout(true);
 	
 	
 	
@@ -48,7 +52,7 @@ public class Tc_09_JanaPayeeDelete  extends ProjectWrapp {
 	
 	}
 catch (Exception e) {
-	logout(false);
+	logout(true);
 	throw new Exception();
 
 }	

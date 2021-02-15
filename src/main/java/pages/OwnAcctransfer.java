@@ -12,14 +12,22 @@ public class OwnAcctransfer extends ProjectWrapp{
 		this.test = test;
 	}
 
-	public OwnAcctransfer submitOwnAccForm(String amount,String remarks,String accno,String accid) throws InterruptedException{
+	public OwnAcctransfer submitOwnAccForm(String amount,String remarks,String toaccno,String accid,String fromacc) throws InterruptedException{
 		String amt=regvalue(amount);
-		String accnum=regvalue(accno);
+		String accnum=regvalue(toaccno);
 		String accidnum=regvalue(accid);
-
+String fromaccnum=regvalue(fromacc);
+	//	4534010000188392
+		
+		
+		
 		clickByXpathExplict(prop.getProperty("click.ownacc.jana.links.xpath"));
 		clickByXpathExplict(".//td[text()='"+accnum+"']//preceding::a[@id='"+accidnum+"']");
 
+		clickByXpathExplict(".//div[@class='ui dropdown selection']");
+		clickByXpathExplict("(.//div[text()='"+fromaccnum+"'])[2]");
+
+		
 		AccountBalance=getTextByXpath(prop.getProperty("getbalance.xpath"));
 System.out.println(AccountBalance);
 		enterByXpathExplict(prop.getProperty("enter.txtamt.xpath"),amt);

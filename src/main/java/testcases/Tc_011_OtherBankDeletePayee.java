@@ -36,7 +36,13 @@ public class Tc_011_OtherBankDeletePayee  extends ProjectWrapp {
 	.clickmanagepayee()
 	.clickotherbankpayee()
 	.clickotherbankpayeeButton(otherpayeenickname)
-	.clickotherpayeeDelete();
+	.clickotherpayeeDelete()
+	.clickDeleteOtherConfirm()
+	.clickmanagepayee()
+	.clickotherbankpayee()
+	.verifyBeneficiaryDeletion(otherpayeenickname);
+	
+	
 	
 	
 	
