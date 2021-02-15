@@ -18,7 +18,7 @@ public class OwnAcctransfer extends ProjectWrapp{
 		String accidnum=regvalue(accid);
 String fromaccnum=regvalue(fromacc);
 	//	4534010000188392
-		
+//		String otpnum=regvalue(otpcode);
 		
 		
 		clickByXpathExplict(prop.getProperty("click.ownacc.jana.links.xpath"));
@@ -35,16 +35,31 @@ enterByXpathExplict(prop.getProperty("enter.ownacc.remarks.xpath"),remarks);
 clickByXpathExplict(prop.getProperty("click.ownacc.submit.xpath"));
 clickByXpathExplict(prop.getProperty("click.ownacc.confirm.submit.xpath"));
 
-
-submitOtp("1111");
-	     
-	     
+//     
 	     return this;
 	
 	}
-				
+public OwnAcctransfer otpVerify(String otpnum) throws InterruptedException{				
+	submitOtp(otpnum);
+    VerifyElementPresent(prop.getProperty("verify.otherpayee.successfule.xpath"),"Own Account Transfer Done","Own Account Transfer has failed");
+    return this;
 	
+}
+public OwnAcctransfer  clickOkTransfer() throws InterruptedException{
+	clickByXpathExplict(prop.getProperty("click.oktransfer.button.link.xpath"));
 	
+
+return this;
+}
 	
+
+
+
+public TransferHistoryPage  clickTransferHistory() throws InterruptedException{
+	clickByXpathExplict(prop.getProperty("click.oktransfer.history.link.xpath"));
+	
+
+return new TransferHistoryPage(driver, test);
+}	
 		
 }
