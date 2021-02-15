@@ -28,6 +28,7 @@ public class Tc_32_Update_Email  extends ProjectWrapp {
 	try{	
 	new JSFB_LoginPage(driver, test)
 	.loginApplication(Username, Password, captcha)
+	.locatingFrames()
 	.clickServices()
 	.clickUpdateEmail()
 	.FillEmailForm(Email)

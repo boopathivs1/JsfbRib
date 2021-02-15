@@ -35,7 +35,7 @@ public class Tc_1_Register  extends ProjectWrapp {
 	.VerifyUserRegistration();
 	}
 catch (Exception e) {
-	logout(false);
+	throw new Exception();
 }	
 
 	}

@@ -28,6 +28,7 @@ public class Tc_04_Verify_Deposit_Overview  extends ProjectWrapp {
 	try{	
 	new JSFB_LoginPage(driver, test)
 	.loginApplication(Username, Password, captcha)
+	.locatingFrames()
 	.clickOverviewButton()
 	.ClickFD()
 	.verifyFDSummary()

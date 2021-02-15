@@ -28,6 +28,7 @@ public class Tc_05_Verify_Loan_Overview  extends ProjectWrapp {
 	try{	
 	new JSFB_LoginPage(driver, test)
 	.loginApplication(Username, Password, captcha)
+	.locatingFrames()
 	.clickOverviewButton()
 	.ClickLoan()
 	.verifyLoanSummary();

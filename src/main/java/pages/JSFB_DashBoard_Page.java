@@ -80,7 +80,7 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 
 	
 	public JSFB_ServicePage clickServices() throws InterruptedException{
-		locateFrameById("canvas");
+		
 	     clickByXpathExplict(prop.getProperty("click.services.xpath"));
 
 		return new JSFB_ServicePage(driver,test);

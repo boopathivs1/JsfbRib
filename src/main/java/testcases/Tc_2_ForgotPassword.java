@@ -36,7 +36,7 @@ public class Tc_2_ForgotPassword  extends ProjectWrapp {
 	
 	}
 catch (Exception e) {
-	logout(false);
+	throw new Exception();
 }	
 
 	}
