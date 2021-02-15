@@ -31,7 +31,8 @@ public class Tc_32_Update_Email  extends ProjectWrapp {
 	.clickServices()
 	.clickUpdateEmail()
 	.FillEmailForm(Email)
-	.SubmitOTP(OTP);
+	.SubmitOTP(OTP)
+	.VerifyEmailUpdated();
 	logout(false);
 	}
 catch (Exception e) {

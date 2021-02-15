@@ -33,10 +33,6 @@ public class Tc_25_ViewStatement  extends ProjectWrapp {
 	.loginApplication(Username, Password, captcha)
 	.clickOverviewButton()
 	.verifyStatement(accnum,month);
-	
-	
-	
-	
 	logout(false);
 	}
 catch (Exception e) {

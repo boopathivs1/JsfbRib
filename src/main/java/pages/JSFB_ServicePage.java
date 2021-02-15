@@ -36,6 +36,13 @@ clickByXpathExplict(prop.getProperty("click.submit.xpath"));
 				return this;
 			}
 	 
+	
+	public JSFB_ServicePage VerifyEmailUpdated() throws InterruptedException{
+	 
+		VerifyElementPresent(prop.getProperty("verify.email.xpath"),"email has updated successfully","email is not updated");
+
+				return this;
+			}
  }
  	
 	
