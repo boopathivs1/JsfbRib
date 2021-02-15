@@ -30,6 +30,9 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 	return this;
 	}
 	
+
+	
+	
 	public JSFB_DashBoard_Page FillFavTransForm(String Payee,String accno,String MOde,String amount,String Remarks) throws InterruptedException{
 		
 		String accnum= regvalue(accno);
@@ -48,9 +51,27 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 		clickByXpathExplict(prop.getProperty("click.button.paynow.xpath"));
 		
 		clickByXpathExplict(prop.getProperty("click.ownacc.confirm.submit.xpath"));
-		submitOtp("1111");
+		
 		return this;
 		}
+	
+	public JSFB_DashBoard_Page otpVerify(String otpnum) throws InterruptedException{				
+		submitOtp(otpnum);
+	    VerifyElementPresent(prop.getProperty("verify.otherpayee.successfule.xpath"),"Favourite transaction Transfer Done","Favourite transaction Transfer has failed");
+	    return this;
+		
+	}
+	public JSFB_DashBoard_Page  clickOkTransfer() throws InterruptedException{
+		clickByXpathExplict(prop.getProperty("click.oktransfer.button.link.xpath"));
+		
+
+	return this;
+
+	}
+	
+	
+
+	
 	
 	
 	public loanspage clickloanlink() throws InterruptedException{
@@ -76,6 +97,7 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 		return new fundtransferpage(driver, test);
 	}
 				
+			
 	
 
 	

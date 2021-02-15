@@ -29,6 +29,18 @@ public class fundtransferpage  extends ProjectWrapp{
 	}		
 	
 	
+	
+	
+	
+
+	public TransferHistoryPage  clickTransferHistory() throws InterruptedException{
+		
+		clickByXpathExplict(prop.getProperty("click.oktransfer.history.link.xpath"));
+		
+
+	return new TransferHistoryPage(driver, test);
+	}
+	
 	public fundtransferpage clickotherbankpayee() throws InterruptedException{
 		
 	     clickByXpathExplict(prop.getProperty("click.otherbankpayee.xpath"));

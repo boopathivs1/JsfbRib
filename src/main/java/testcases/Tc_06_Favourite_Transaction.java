@@ -24,15 +24,23 @@ public class Tc_06_Favourite_Transaction  extends ProjectWrapp {
 
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void DEpositOverview(String casename,String Username,String Password,String captcha,String Payee,String accno,String Mode,String amount,String remarks,String otp,String param6,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+	public void DEpositOverview(String casename,String Username,String Password,String captcha,String Payee,String accno,String Mode,String amount,String remarks,String otp,String amountRange,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
 		try{	
 
 	new JSFB_LoginPage(driver, test)
 	.loginApplication(Username, Password, captcha)
 	.locatingFrames()
-	.FillFavTransForm(Payee,accno,Mode,amount,remarks);
-	
+	.FillFavTransForm(Payee,accno,Mode,amount,remarks)
+	.otpVerify(otp)
+	.clickOkTransfer()
+	.clickfundtrans()
+	.clickTransferHistory()
+	.filterTransHistory(accno, amountRange)
+	.verifyHistoryAmount(amount)
+	.clickAccountMenu()
+	.verifyBalanceDeduction(accno);
 	logout(false);
+	
 	}
 catch (Exception e) {
 	logout(false);

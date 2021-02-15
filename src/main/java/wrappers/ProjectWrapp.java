@@ -137,17 +137,13 @@ public void beforeMethods(String Browser) throws IOException{
 public void logout(Boolean frameMode) throws InterruptedException{
 	
 	
-<<<<<<< HEAD
+
 	loadtime();
 
 	loadtime();
 	loadtime();
 
-=======
-//	loadtime();
-//	loadtime();
-//	loadtime();
->>>>>>> branch 'master' of https://github.com/boopathivs1/JsfbRib
+
 	loadtime();
 	if(frameMode)
 	{

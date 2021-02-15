@@ -34,13 +34,23 @@ System.out.println(AccountBalance);
 enterByXpathExplict(prop.getProperty("enter.ownacc.remarks.xpath"),remarks);
 clickByXpathExplict(prop.getProperty("click.ownacc.submit.xpath"));
 clickByXpathExplict(prop.getProperty("click.ownacc.confirm.submit.xpath"));
-
-
-submitOtp("1111");
-	     
 	     
 	     return this;
 	
+	}
+	
+	public JSFB_JanabankTransferPage otpVerify(String otpnum) throws InterruptedException{				
+		submitOtp(otpnum);
+	    VerifyElementPresent(prop.getProperty("verify.otherpayee.successfule.xpath"),"Jana Account Transfer Done","Jana Account Transfer has failed");
+	    return this;
+		
+	}
+	public JSFB_JanabankTransferPage  clickOkTransfer() throws InterruptedException{
+		clickByXpathExplict(prop.getProperty("click.oktransfer.button.link.xpath"));
+		
+
+	return this;
+
 	}
 	
 	
@@ -53,8 +63,6 @@ submitOtp("1111");
 
 public TransferHistoryPage  clickTransferHistory() throws InterruptedException{
 	
-	
-	 clickByXpathExplict(prop.getProperty("click.fundtransmenu.xpath"));
 	clickByXpathExplict(prop.getProperty("click.oktransfer.history.link.xpath"));
 	
 

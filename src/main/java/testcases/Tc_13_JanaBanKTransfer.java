@@ -33,6 +33,8 @@ public class Tc_13_JanaBanKTransfer  extends ProjectWrapp {
 	.clickInitiatetrans()
 	.clickJanaPayeeTab()
 	.submitJanaAccForm( accno,name,amount, remarks)
+	.otpVerify(otp)
+	.clickOkTransfer()
 	.clickTransferHistory()
 	.filterTransHistory(fromacc, amountRange)
 	.verifyHistoryAmount(amount)
