@@ -28,11 +28,14 @@ public class Tc_08_AddPayee_JanaBank  extends ProjectWrapp {
 	try{	
 	new JSFB_LoginPage(driver, test)
 	.loginApplication(Username, Password, captcha)
+	.locatingFrames()
 	.clickOverviewButton()
 	.clickfundtrans()
 	.clickaddpayeemenu()
 	.clickjanabank()
-	.filljanabankpayee(accno,nickname,otp);
+	.filljanabankpayee(accno,nickname,otp)
+	.verifyJanaPayee()
+	.verifyJanaPayeeAdded(nickname);
 	
 	logout(false);
 	}

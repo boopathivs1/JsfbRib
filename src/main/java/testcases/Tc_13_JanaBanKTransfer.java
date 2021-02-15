@@ -24,7 +24,7 @@ public class Tc_13_JanaBanKTransfer  extends ProjectWrapp {
 
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void DEpositOverview(String casename,String Username,String Password,String captcha,String accno,String listid,String accid,String amount,String remarks,String otp,String param6,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+	public void DEpositOverview(String casename,String Username,String Password,String captcha,String accno,String name,String amount,String remarks,String otp,String fromacc,String amountRange,String param6,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15) throws Exception{
 	try{	
 	new JSFB_LoginPage(driver, test)
 	.loginApplication(Username, Password, captcha)
@@ -32,7 +32,12 @@ public class Tc_13_JanaBanKTransfer  extends ProjectWrapp {
 	.clickfundtrans()
 	.clickInitiatetrans()
 	.clickJanaPayeeTab()
-	.submitJanaAccForm( accno,listid, accid,amount, remarks);
+	.submitJanaAccForm( accno,name,amount, remarks)
+	.clickTransferHistory()
+	.filterTransHistory(fromacc, amountRange)
+	.verifyHistoryAmount(amount)
+	.clickAccountMenu()
+	.verifyBalanceDeduction(fromacc);
 	logout(false);
 	}
 catch (Exception e) {

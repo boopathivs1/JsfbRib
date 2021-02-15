@@ -22,12 +22,11 @@ public class JSFB_JanabankTransferPage extends ProjectWrapp{
 	
 	
 	
-	public JSFB_JanabankTransferPage submitJanaAccForm(String accno,String listid,String accid,String amount,String remarks) throws InterruptedException{
+	public JSFB_JanabankTransferPage submitJanaAccForm(String accno,String name ,String amount,String remarks) throws InterruptedException{
 		String amt=regvalue(amount);
 		String accnum=regvalue(accno);
-		String accidnum=regvalue(accid);
-
-		clickByXpathExplict(".//td[text()='"+accnum+"']//preceding::form[@id='"+listid+"']//a[@id='"+accidnum+"']");
+	
+		clickByXpathExplict("//td[.='"+accnum+"']//preceding::a[contains(.,'"+name+"')]");
 
 		AccountBalance=getTextByXpath(prop.getProperty("getbalance.xpath"));
 System.out.println(AccountBalance);
@@ -43,6 +42,27 @@ submitOtp("1111");
 	     return this;
 	
 	}
+	
+	
+	public JSFB_JanabankTransferPage locatingFrames() throws InterruptedException{
+		
+	locateFrameById("canvas");
+	return this;
+	}
+	
+
+public TransferHistoryPage  clickTransferHistory() throws InterruptedException{
+	
+	
+	 clickByXpathExplict(prop.getProperty("click.fundtransmenu.xpath"));
+	clickByXpathExplict(prop.getProperty("click.oktransfer.history.link.xpath"));
+	
+
+return new TransferHistoryPage(driver, test);
+}	
+	
+	
+	
 	
 	public JSFB_OtherbankTransferPage clickOtherPayeeTab() throws InterruptedException{
 		

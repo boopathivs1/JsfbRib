@@ -40,6 +40,14 @@ submitOtp("1111");
 	
 	}
 	
+	public TransferHistoryPage  clickTransferHistory() throws InterruptedException{
+		clickByXpathExplict(prop.getProperty("click.oktransfer.history.link.xpath"));
+		
+
+	return new TransferHistoryPage(driver, test);
+	}	
+	
+	
 		 
  }
  	

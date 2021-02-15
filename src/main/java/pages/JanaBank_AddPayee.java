@@ -27,4 +27,27 @@ public class JanaBank_AddPayee  extends ProjectWrapp{
 	return this;
 	
 	}
+	
+	
+	public JanaBank_AddPayee  verifyJanaPayee() throws InterruptedException{
+		
+		VerifyElementPresent(prop.getProperty("verify.otherpayee.successfule.xpath"),"Jana Payee Added Successfully","Jana Payee has not Added Successfully");
+		
+		clickByXpathExplict(prop.getProperty("click.addpayee.link.xpath"));
+		
+	
+	return this;
+	
+		}
+	
+public JanaBank_AddPayee  verifyJanaPayeeAdded(String Janapayeenickname) throws InterruptedException{
+		
+		
+		clickByXpathExplict(prop.getProperty("clickotherbank.managelink.xpath"));
+		clickByXpathExplict(prop.getProperty("click.janapayee.tab.xpath"));
+scrolltoelementJs("(.//input[contains(@value,'EXTSUBMOD~"+Janapayeenickname+"')]//following::label)[1]");
+VerifyElementPresent("(.//input[contains(@value,'EXTSUBMOD~"+Janapayeenickname+"')]//following::label)[1]","JanaPayee Beneficiary has added successfully","JanaPayee Beneficiary has not added successfully");
+
+return this;
+	
 }
