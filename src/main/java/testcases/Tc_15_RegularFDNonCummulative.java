@@ -24,7 +24,7 @@ public class Tc_15_RegularFDNonCummulative  extends ProjectWrapp {
 
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void DEpositOverview(String casename,String Username,String Password,String captcha,String fromacc,String amount,String Years,String param3,String param4,String param5,String param6,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+	public void DEpositOverview(String casename,String Username,String Password,String captcha,String fromacc,String amount,String Years,String MaturityOpt,String NomineeName,String relation,String Mobno,String address,String Zip,String OTP,String Mobnumber1,String address1,String param11,String param13,String param14,String param15,String param16) throws Exception{
 	try{	
 	new JSFB_LoginPage(driver, test)
 	.loginApplication(Username, Password, captcha)
@@ -32,12 +32,15 @@ public class Tc_15_RegularFDNonCummulative  extends ProjectWrapp {
 	.clickDepositMenu()
 	.clickOpenDeposit()
 	.clickRegulrFDNonCumm_Deposit()
-	.FillDepositForm(fromacc,amount,Years);
+	.FillDepositForm(fromacc,amount,Years,MaturityOpt)
+	.SelectNominee()
+	.FillNomineeForm( NomineeName, relation, Mobno,address,Zip)
+	.SubmitOTP(OTP);
 	
 	logout(false);
 	}
 catch (Exception e) {
-	logout(false);
+	//logout(false);
 	throw new Exception();
 
 }	

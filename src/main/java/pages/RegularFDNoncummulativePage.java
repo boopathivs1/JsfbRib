@@ -17,24 +17,31 @@ public class RegularFDNoncummulativePage  extends ProjectWrapp{
 	
 	
 	
-	public RegularFDNoncummulativePage FillDepositForm(String fromacc,String amount,String Years) throws InterruptedException{
+	public RegularFDNoncummulativePage FillDepositForm(String fromacc,String amount,String Years,String MaturityOpt) throws InterruptedException{
 		
 		String accno= regvalue(fromacc);
 		String amt= regvalue(amount);
 		
 		 dropdownSelectionbyindex(1,accno);
 		enterByXpathExplict(prop.getProperty("enter.deposit.amount.xpath"),amt);
-		 
 		 dropdownSelectionbyindex(2,Years); 
-		 
-		 dropdownSelectionbyindex(4,"1 Months");
-			dropdownSelectionbyindex(5,accno);
+		 pageScroll();
+		 dropdownSelectionbyindex(4,MaturityOpt);
+		//dropdownSelectionbyindex(6,accno);
+		clickByXpathExplict(prop.getProperty("click.deposit.next.button.xpath"));
 			
 		
 			
 		
 		return this;
 		}
+	
+	public NomineePage SelectNominee() throws InterruptedException
+	{
+	pageScrollup();
+		clickByXpathExplict(prop.getProperty("click.radiobtn.yes.xpath"));
+		return  new NomineePage(driver, test);
+	}
 	
 	
 		}

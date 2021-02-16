@@ -4306,6 +4306,7 @@ clickByXpathExplict("(.//div[contains(@class,'visible')])[2]//div[text()='"+text
 
 
 
+
 	public String getTextByXpath(String xpathVal){
 		try {
 			readywithtime(xpathVal);
