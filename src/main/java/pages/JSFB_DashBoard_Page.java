@@ -36,7 +36,11 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 	return this;
 	}
 	
-
+	public RegularFDNoncummulativePage ClickDeposit() throws InterruptedException{
+		
+		 clickByXpathExplict(prop.getProperty("click.deposit.xpath"));
+		return new RegularFDNoncummulativePage(driver,test);
+		}
 	
 	
 	public JSFB_DashBoard_Page FillFavTransForm(String Payee,String accno,String MOde,String amount,String Remarks) throws InterruptedException{

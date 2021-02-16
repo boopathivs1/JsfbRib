@@ -46,6 +46,13 @@ public class DepositPage  extends ProjectWrapp{
 		return new Jana_recurring_Deposit(driver, test);
 	}
 	
+	public  RegularFDNoncummulativePage clickRegulrFDNonCumm_Deposit() throws InterruptedException{
+		
+		
+	     clickByXpathExplict(prop.getProperty("click.regularFD.NonCumm.xpath"));
+
+		return new RegularFDNoncummulativePage(driver, test);
+	}
 	
 	
 	public  Jana_taxsaver_deposit click_taxsaver() throws InterruptedException{
