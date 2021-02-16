@@ -114,7 +114,7 @@ public void beforeMethods(String Browser) throws IOException{
 	@AfterMethod(groups={"common"})
 	public void afterMethod() throws InterruptedException{
 		endTestcase();
-	//closeAllBrowsers();
+	closeAllBrowsers();
 
 	
 	

@@ -22,6 +22,30 @@ public class DepositPage  extends ProjectWrapp{
 		
 	}
 	
+	
+	public  CloseDepositPage CloseDepositForm(String amount) throws InterruptedException{
+		
+		
+	     clickByXpathExplict("//td[.='"+amount+"']//preceding::a[1]");
+	     
+	     clickByXpathExplict(prop.getProperty("click.close.deposit.xpath"));
+	     
+	     clickByXpathExplict(prop.getProperty("click.closedeposit.change.xpath"));
+	     
+	     clickByXpathExplict(prop.getProperty("click.closedeposit.confirm.xpath"));
+
+		return new CloseDepositPage(driver, test);
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
 	public  DepositPage clickOpenDeposit() throws InterruptedException{
 		
 		

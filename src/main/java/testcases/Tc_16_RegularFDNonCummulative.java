@@ -35,7 +35,8 @@ public class Tc_16_RegularFDNonCummulative  extends ProjectWrapp {
 	.FillDepositForm(fromacc,amount,Years,MaturityOpt)
 	.SelectNominee()
 	.FillNomineeForm( NomineeName, relation, Mobno,address,Zip)
-	.SubmitOTP(OTP);
+	.SubmitOTP(OTP)
+	.VerifyOpenFDNonCummulativeDeposit();
 	
 	logout(false);
 	}
