@@ -1254,7 +1254,7 @@ return B;
 				driver = new RemoteWebDriver(new URL("http://"+sHubUrl+":"+sHubPort+"/wd/hub"), dc);
 				else{ // this is for local run
 				if(browser.equalsIgnoreCase("chrome")){
-					System.setProperty("webdriver.chrome.driver", "./drivers/chromedrivers.exe");
+					System.setProperty("webdriver.chrome.driver", "./drivers/chromedrivers88.exe");
 					
 					
 					driver = new ChromeDriver();
@@ -4296,8 +4296,9 @@ public void dropdownSelectionbyindex(int i,String text) throws InterruptedExcept
 
 
 
-clickByXpathExplict("(.//div[@class='ui dropdown selection'])["+i+"]");
-clickByXpathExplict("(.//div[contains(@class,'visible')])[2]//div[text()='"+text+"']");
+clickByXpathExplict("(.//div[contains(@class,'ui dropdown selection')])["+i+"]");
+//clickByXpathExplict("(.//div[contains(@class,'visible')])[2]//div[text()='"+text+"']");
+clickByXpathExplict("(.//div[contains(@class,'visible')])[2]//div[contains(text(),'"+text+"')]");
 
 
 }
@@ -4592,9 +4593,9 @@ clickByXpathExplict("(.//div[contains(@class,'visible')])[2]//div[text()='"+text
 	
 	@Override
 	public long takeSnap() {
-		//String scrPath="./reports/images";
-	//	File file = new File(scrPath);
-	  //  file.mkdir();
+	//	String scrPath="./reports/images";
+	//File file = new File(scrPath);
+	 //  file.mkdir();
 		
 	long number = (long) Math.floor(Math.random() * 900000000L) + 10000000L; 
 try
@@ -4606,7 +4607,7 @@ try
 	        BufferedImage bufferedImage = robot.createScreenCapture(captureSize);
 	        
 	        File outputfile = new File("./reports/images/"+number+".jpg");
-//	        File outputfile = new File(scrPath+"/"+number+".png");
+       // File outputfile = new File(scrPath+"/"+number+".png");
 	        ImageIO.write(bufferedImage, "png", outputfile);       
 	    }
 catch (WebDriverException e) {

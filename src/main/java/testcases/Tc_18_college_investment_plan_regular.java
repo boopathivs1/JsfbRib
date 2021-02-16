@@ -9,16 +9,16 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.JSFB_LoginPage;
 import wrappers.ProjectWrapp;
-public class Tc_17_Jana_Recurring_Deposit  extends ProjectWrapp {
+public class Tc_18_college_investment_plan_regular  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC17";
-		testDescription="Jana Recurring Deposit";
+		testCaseName="TC18";
+		testDescription="college investment plan regular";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC17";
+		testKeyword="TC18";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 
@@ -35,7 +35,7 @@ try{
 	.locatingFrames()
 	.clickDepositMenu()
 	.clickOpenDeposit()
-	.clickjanaRecurring_Deposit()
+	.click_college_investment_Deposit()
 	.fillJanaRecurring(Sourcenum, amtrange, deposit_frequency_month, deposit_frequency_year, tensure_month, toaccnum);
 	logout(false);
 	}

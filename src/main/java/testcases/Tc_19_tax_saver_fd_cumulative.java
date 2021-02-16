@@ -9,25 +9,29 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.JSFB_LoginPage;
 import wrappers.ProjectWrapp;
-public class Tc_17_Jana_Recurring_Deposit  extends ProjectWrapp {
+public class Tc_19_tax_saver_fd_cumulative  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC17";
-		testDescription="Jana Recurring Deposit";
+		testCaseName="TC19";
+		testDescription="college investment plan regular";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
 		authors="Boopathi";
-		testKeyword="TC17";
+		testKeyword="TC19";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void DEpositOverview(String casename,String Username,String Password,String captcha,String sourceaccno,String amountRange,String deposit_frequency_month,String deposit_frequency_year,String tensure_month,String toaacno,String param0,String param6,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+	public void DEpositOverview(String casename,String Username,String Password,String captcha,String sourceaccno,
+			String amount,String toaccno,String params1,String params2,String params3,String param0,String param6,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
 		String Sourcenum=regvalue(sourceaccno);
-String amtrange=regvalue(amountRange);		
-String toaccnum=regvalue(toaacno);
+String toaccnum=regvalue(toaccno);
+
+String amt=regvalue(amount);
+
+
 try{	
 
 	new JSFB_LoginPage(driver, test)
@@ -35,8 +39,8 @@ try{
 	.locatingFrames()
 	.clickDepositMenu()
 	.clickOpenDeposit()
-	.clickjanaRecurring_Deposit()
-	.fillJanaRecurring(Sourcenum, amtrange, deposit_frequency_month, deposit_frequency_year, tensure_month, toaccnum);
+	.click_taxsaver()
+	.filltaxsaver(Sourcenum, amt, toaccnum);
 	logout(false);
 	}
 catch (Exception e) {

@@ -13,25 +13,25 @@ public class Jana_recurring_Deposit  extends ProjectWrapp{
 	}
 
 
-	public Jana_recurring_Deposit fillJanaRecurring(String sourceaccno,String amount,String daywise) throws InterruptedException{
+	public Jana_recurring_Deposit fillJanaRecurring(String sourceaccno,String amount,String deposit_frequency_month,String deposit_frequency_year,String tensure_month,String toaacno ) throws InterruptedException{
 		
-		dropdownSelectionbyindex(1,"4534010000188902");
+		dropdownSelectionbyindex(1,sourceaccno);
 		
 		
-		enterByXpathExplict(".//input[@id='installmentAmount']","1000");
+		enterByXpathExplict(prop.getProperty("installment.amount.xpath"),amount);
 				//deposit frequency
 		
-		dropdownSelectionbyindex(2,"Monthly");
+		dropdownSelectionbyindex(2,deposit_frequency_month);
 		
-		dropdownSelectionbyindex(3,"1 Years");
+		dropdownSelectionbyindex(3,deposit_frequency_year);
 		
 
-		dropdownSelectionbyindex(4,"1 Months");
-		dropdownSelectionbyindex(5,"4534010000188392");
+		dropdownSelectionbyindex(4,tensure_month);
+		dropdownSelectionbyindex(5,toaacno);
 		
-		clickByXpathExplict(".//input[@id='confirmBeneDtls']");
+		clickByXpathExplict(prop.getProperty("click.deposit.confirmdetails.xpath"));
 				
-				
+		
 
 
 

@@ -26,7 +26,9 @@ public abstract class Reporter {
 				e.printStackTrace();
 			}
 			desc = desc+test.
-					addScreenCapture("./../reports/images/"+snapNumber+".jpg");
+				//	addScreenCapture("./../reports/images/"+snapNumber+".jpg");
+			addScreenCapture("./../reports/images/"+snapNumber+".jpg");
+
 		}
 		
 		// Write if it is successful or failure or information
