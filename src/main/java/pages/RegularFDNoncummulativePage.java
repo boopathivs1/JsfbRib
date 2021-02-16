@@ -17,18 +17,22 @@ public class RegularFDNoncummulativePage  extends ProjectWrapp{
 	
 	
 	
-	public RegularFDNoncummulativePage FillDepositForm(String fromacc) throws InterruptedException{
+	public RegularFDNoncummulativePage FillDepositForm(String fromacc,String amount,String Years) throws InterruptedException{
 		
 		String accno= regvalue(fromacc);
+		String amt= regvalue(amount);
 		
+		 dropdownSelectionbyindex(1,accno);
+		enterByXpathExplict(prop.getProperty("enter.deposit.amount.xpath"),amt);
 		 
-		 clickByXpathExplict(prop.getProperty("click.fromacc.dropdown.xpath"));
+		 dropdownSelectionbyindex(2,Years); 
 		 
-		 clickByXpathExplict(prop.getProperty("click.fromacc.dropdown.xpath"));
-		 
-		 clickByXpathExplict("//div[.='"+accno+"']");
-		 
-		 
+		 dropdownSelectionbyindex(4,"1 Months");
+			dropdownSelectionbyindex(5,accno);
+			
+		
+			
+		
 		return this;
 		}
 	

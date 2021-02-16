@@ -4291,7 +4291,16 @@ System.out.println(xpath2);
 
 
 }
-		
+
+public void dropdownSelectionbyindex(int i,String text) throws InterruptedException{ 
+
+
+
+clickByXpathExplict("(.//div[@class='ui dropdown selection'])["+i+"]");
+clickByXpathExplict("(.//div[contains(@class,'visible')])[2]//div[text()='"+text+"']");
+
+
+}
 
 
 
