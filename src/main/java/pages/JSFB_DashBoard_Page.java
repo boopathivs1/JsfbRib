@@ -20,7 +20,13 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 		return this;
 	}
 	
-	
+	public DepositPage clickDepositMenu() throws InterruptedException{
+		
+		
+	     clickByXpathExplict(prop.getProperty("click.deposit.menu.xpath"));
+
+		return new DepositPage(driver, test);
+	}
 	
 	
 	

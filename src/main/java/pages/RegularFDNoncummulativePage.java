@@ -15,18 +15,12 @@ public class RegularFDNoncummulativePage  extends ProjectWrapp{
 	
 	
 	
-	public RegularFDNoncummulativePage ClickOpenDeposit() throws InterruptedException{
-		
-		 clickByXpathExplict(prop.getProperty("click.open.deposit.xpath"));
-		return this;
-		}
 	
 	
 	public RegularFDNoncummulativePage FillDepositForm(String fromacc) throws InterruptedException{
 		
 		String accno= regvalue(fromacc);
 		
-		 clickByXpathExplict(prop.getProperty("click.regularFD.NonCumm.xpath"));
 		 
 		 clickByXpathExplict(prop.getProperty("click.fromacc.dropdown.xpath"));
 		 

@@ -9,37 +9,34 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.JSFB_LoginPage;
 import wrappers.ProjectWrapp;
-public class Tc_15_RegularFDNonCummulative  extends ProjectWrapp {
+public class Tc_17_Jana_Recurring_Deposit  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC15";
-		testDescription="RegularFDNonCummulative";
+		testCaseName="TC14";
+		testDescription="Otherbank_Transfer";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC15";
+		testKeyword="TC14";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void DEpositOverview(String casename,String Username,String Password,String captcha,String fromacc,String Email,String param2,String param3,String param4,String param5,String param6,String param7,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
-	try{	
+	public void DEpositOverview(String casename,String Username,String Password,String captcha,String accno,String name,String amount,String remarks,String otp,String fromacc,String amountRange,String param6,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+		try{	
+
 	new JSFB_LoginPage(driver, test)
 	.loginApplication(Username, Password, captcha)
 	.locatingFrames()
 	.clickDepositMenu()
 	.clickOpenDeposit()
-	.clickRegulrFDNonCumm_Deposit()
-	.FillDepositForm(fromacc);
-	
+	.clickjanaRecurring_Deposit();
 	logout(false);
 	}
 catch (Exception e) {
 	logout(false);
-	throw new Exception();
-
 }	
 
 	}
