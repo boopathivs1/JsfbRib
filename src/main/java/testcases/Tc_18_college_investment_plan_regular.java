@@ -24,10 +24,16 @@ public class Tc_18_college_investment_plan_regular  extends ProjectWrapp {
 
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void DEpositOverview(String casename,String Username,String Password,String captcha,String sourceaccno,String amountRange,String deposit_frequency_month,String deposit_frequency_year,String tensure_month,String toaacno,String param0,String param6,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+	public void DEpositOverview(String casename,String Username,String Password,String captcha,String sourceaccno,
+			String amountRange,String deposit_frequency_month,String deposit_frequency_year,String tensure_month,
+			String toaacno,String NomineeName,String relation,String Mobno,String address,String Zip,
+			String otp,String param12,String param13,String param14,String param15,String param16) throws Exception{
+	
+		
 		String Sourcenum=regvalue(sourceaccno);
 String amtrange=regvalue(amountRange);		
 String toaccnum=regvalue(toaacno);
+String otpnum=regvalue(otpcode);
 try{	
 
 	new JSFB_LoginPage(driver, test)
@@ -36,7 +42,13 @@ try{
 	.clickDepositMenu()
 	.clickOpenDeposit()
 	.click_college_investment_Deposit()
-	.fillJanaRecurring(Sourcenum, amtrange, deposit_frequency_month, deposit_frequency_year, tensure_month, toaccnum);
+	.fillJanaRecurring(Sourcenum, amtrange, deposit_frequency_month, deposit_frequency_year, tensure_month, toaccnum)
+	
+	.SelectNominee()
+	.FillNomineeForm( NomineeName, relation, Mobno,address,Zip)
+	.SubmitOTP(otpnum);
+	
+	
 	logout(false);
 	}
 catch (Exception e) {

@@ -25,12 +25,15 @@ public class Tc_19_tax_saver_fd_cumulative  extends ProjectWrapp {
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
 	public void DEpositOverview(String casename,String Username,String Password,String captcha,String sourceaccno,
-			String amount,String toaccno,String params1,String params2,String params3,String param0,String param6,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+			String amount,String toaccno,String NomineeName,String relation,String Mobno,String address,String Zip,
+			String otp,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+		
+		
 		String Sourcenum=regvalue(sourceaccno);
 String toaccnum=regvalue(toaccno);
 
 String amt=regvalue(amount);
-
+String otpnum=regvalue(otp);
 
 try{	
 
@@ -40,7 +43,11 @@ try{
 	.clickDepositMenu()
 	.clickOpenDeposit()
 	.click_taxsaver()
-	.filltaxsaver(Sourcenum, amt, toaccnum);
+	.filltaxsaver(Sourcenum, amt, toaccnum)
+	.SelectNominee()
+	.FillNomineeForm( NomineeName, relation, Mobno,address,Zip)
+	.SubmitOTP(otpnum);
+	
 	logout(false);
 	}
 catch (Exception e) {

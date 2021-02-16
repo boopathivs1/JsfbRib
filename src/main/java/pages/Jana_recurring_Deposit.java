@@ -11,8 +11,6 @@ public class Jana_recurring_Deposit  extends ProjectWrapp{
 		this.driver = driver;
 		this.test = test;
 	}
-
-
 	public Jana_recurring_Deposit fillJanaRecurring(String sourceaccno,String amount,String deposit_frequency_month,String deposit_frequency_year,String tensure_month,String toaacno ) throws InterruptedException{
 		
 		dropdownSelectionbyindex(1,sourceaccno);
