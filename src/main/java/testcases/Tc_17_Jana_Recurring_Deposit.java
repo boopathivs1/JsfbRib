@@ -32,7 +32,8 @@ public class Tc_17_Jana_Recurring_Deposit  extends ProjectWrapp {
 	.locatingFrames()
 	.clickDepositMenu()
 	.clickOpenDeposit()
-	.clickjanaRecurring_Deposit();
+	.clickjanaRecurring_Deposit()
+	.fillJanaRecurring("sourceaccno","fgb", "1");
 	logout(false);
 	}
 catch (Exception e) {
