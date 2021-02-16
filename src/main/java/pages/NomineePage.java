@@ -56,6 +56,8 @@ public class NomineePage  extends ProjectWrapp{
 	Thread.sleep(1000);
 	clickByXpathExplict(".//span[text()='Jan']");
 	clickByXpathExplict("(.//td[text()='1'])[1]");
+	
+	
 	SelectDropdownByIndex(1,relation,1);
 	
 	enterByXpathExplict(prop.getProperty("enter.Nominee.mobno.xpath"),Mobnumber);

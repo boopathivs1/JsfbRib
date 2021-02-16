@@ -51,6 +51,12 @@ public class Jana_recurring_Deposit  extends ProjectWrapp{
 		return this;
 	}
 	
+	public NomineePage SelectNominee() throws InterruptedException
+	{
+	pageScrollup();
+		clickByXpathExplict(prop.getProperty("click.radiobtn.yes.xpath"));
+		return  new NomineePage(driver, test);
+	}
 	
 	
 	
