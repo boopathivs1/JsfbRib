@@ -13,7 +13,7 @@ public class Tc_19_tax_saver_fd_cumulative  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC19";
-		testDescription="college investment plan regular";
+		testDescription="Tax saver FD Cumulative investment plan regular";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
@@ -46,7 +46,8 @@ try{
 	.filltaxsaver(Sourcenum, amt, toaccnum)
 	.SelectNominee()
 	.FillNomineeForm( NomineeName, relation, Mobno,address,Zip)
-	.SubmitOTP(otpnum);
+	.SubmitOTP(otpnum)
+	.verifyDepositsuccess();
 	
 	logout(false);
 	}

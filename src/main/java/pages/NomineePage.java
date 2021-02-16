@@ -32,6 +32,17 @@ public class NomineePage  extends ProjectWrapp{
 				return this;
 			}
 	
+	public JSFB_DashBoard_Page verifyDepositsuccess() throws InterruptedException{
+	     
+//VerifyElementpresentreturn(".//h3[contains(text(),'Successfully')]");
+	
+VerifyElementPresent(".//h3[contains(text(),'Successfully')]","Amount deposited successfully","Amount not  deposited successfully");
+
+	return new JSFB_DashBoard_Page(driver, test);
+}
+	
+	
+	
 	
 	public NomineePage FillNomineeForm(String NomineeName,String relation,String Mobno,String address,String Zip) throws InterruptedException
 	{
@@ -56,8 +67,8 @@ public class NomineePage  extends ProjectWrapp{
 	clickByXpathExplict(prop.getProperty("select.calendar.month.xpath"));
 	clickByXpathExplict(prop.getProperty("select.calendar.day.xpath"));
 
-	clickByXpathExplict(".//span[text()='Jan']");
-	clickByXpathExplict("(.//td[text()='1'])[1]");
+//	clickByXpathExplict(".//span[text()='Jan']");
+	//clickByXpathExplict("(.//td[text()='1'])[1]");
 	
 	
 
@@ -74,6 +85,12 @@ public class NomineePage  extends ProjectWrapp{
 	scrolltoelementJs(prop.getProperty("click.nominee.nextbtn.xpath"));
 	
 	clickByXpathExplict(prop.getProperty("click.nominee.nextbtn.xpath"));
+	scrolltoelementJs("(.//h3[contains(@id,'Amount')])[1]");
+	
+	AccountBalance=getTextByXpath("(.//h3[contains(@id,'Amount')])[1]");
+	
+	
+	System.out.println(AccountBalance);
 	clickByXpathExplict(prop.getProperty("click.nominee.confirm.xpath"));
 	
 		return  this;

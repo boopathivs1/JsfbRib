@@ -45,13 +45,17 @@ try{
 	.fillJanaRecurring(Sourcenum, amtrange, deposit_frequency_month, deposit_frequency_year, tensure_month, toaccnum)
 	.SelectNominee()
 	.FillNomineeForm( NomineeName, relation, Mobno,address,Zip)
-	.SubmitOTP(otpnum);
+	.SubmitOTP(otpnum)
+	.verifyDepositsuccess();
+	//.clickDepositMenu()
+	//.clickManageDeposit();
 	
 	
 	logout(false);
 	}
 catch (Exception e) {
 	logout(false);
+	throw new Exception();
 }	
 
 	}

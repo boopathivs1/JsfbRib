@@ -22,6 +22,22 @@ public class DepositPage  extends ProjectWrapp{
 		
 	}
 	
+	
+	
+	public  DepositPage clickDepositedAmount(String amount) throws InterruptedException{
+		String amt=regvalue(amount);
+		
+	     clickByXpathExplict(".//td[contains(text(),'"+AccountBalance+"')]/preceding::a[1]");
+
+		return this;
+		
+	}
+	
+	
+
+	
+	
+	
 	public  DepositPage clickOpenDeposit() throws InterruptedException{
 		
 		

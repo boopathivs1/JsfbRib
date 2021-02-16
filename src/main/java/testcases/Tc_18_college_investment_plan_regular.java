@@ -33,7 +33,7 @@ public class Tc_18_college_investment_plan_regular  extends ProjectWrapp {
 		String Sourcenum=regvalue(sourceaccno);
 String amtrange=regvalue(amountRange);		
 String toaccnum=regvalue(toaacno);
-String otpnum=regvalue(otpcode);
+String otpnum=regvalue(otp);
 try{	
 
 	new JSFB_LoginPage(driver, test)
@@ -46,7 +46,10 @@ try{
 	
 	.SelectNominee()
 	.FillNomineeForm( NomineeName, relation, Mobno,address,Zip)
-	.SubmitOTP(otpnum);
+
+	.SubmitOTP(otpnum)
+	.verifyDepositsuccess();
+	
 	
 	
 	logout(false);
