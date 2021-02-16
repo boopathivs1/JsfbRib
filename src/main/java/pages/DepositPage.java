@@ -16,7 +16,7 @@ public class DepositPage  extends ProjectWrapp{
 	public  DepositPage clickManageDeposit() throws InterruptedException{
 		
 		
-	     clickByXpathExplict(prop.getProperty(""));
+	     clickByXpathExplict(prop.getProperty("click.manage.deposit.xpath"));
 
 		return this;
 		
@@ -25,17 +25,16 @@ public class DepositPage  extends ProjectWrapp{
 	public  DepositPage clickOpenDeposit() throws InterruptedException{
 		
 		
-	     clickByXpathExplict(prop.getProperty(""));
+	     clickByXpathExplict(prop.getProperty("click.open.deposit.xpath"));
 
 		return this;
 	}
 	
 	
-	
 	public  Jana_recurring_Deposit clickjanaRecurring_Deposit() throws InterruptedException{
 		
 		
-	     clickByXpathExplict(prop.getProperty(""));
+	     clickByXpathExplict(prop.getProperty("click.janarecurring.deposit.xpath"));
 
 		return new Jana_recurring_Deposit(driver, test);
 	}
