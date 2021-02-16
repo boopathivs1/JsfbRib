@@ -54,7 +54,7 @@ public class DepositPage  extends ProjectWrapp{
 		return new RegularFDNoncummulativePage(driver, test);
 	}
 	
-	public  RegularFDNoncummulativePage clickRegulrFDCumm_Deposit() throws InterruptedException{
+	public  RegularFDNoncummulativePage clickRegulrFDDeposit() throws InterruptedException{
 		
 		
 	     clickByXpathExplict(prop.getProperty("click.regularFD.Cumm.xpath"));
