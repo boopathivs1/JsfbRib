@@ -52,8 +52,15 @@ public class NomineePage  extends ProjectWrapp{
 	clickByXpathExplict(prop.getProperty("select.calendar.year4.xpath"));
 	clickByXpathExplict(prop.getProperty("select.calendar.year5.xpath"));
 	Thread.sleep(1000);
+
 	clickByXpathExplict(prop.getProperty("select.calendar.month.xpath"));
 	clickByXpathExplict(prop.getProperty("select.calendar.day.xpath"));
+
+	clickByXpathExplict(".//span[text()='Jan']");
+	clickByXpathExplict("(.//td[text()='1'])[1]");
+	
+	
+
 	SelectDropdownByIndex(1,relation,1);
 	
 	enterByXpathExplict(prop.getProperty("enter.Nominee.mobno.xpath"),Mobnumber);
