@@ -42,16 +42,16 @@ public class NomineePage  extends ProjectWrapp{
 	enterByXpathExplict(prop.getProperty("enter.nominee.name.xpath"),NomineeName);
 	clickByXpathExplict(prop.getProperty("click.dob.xpath"));
 	//clickByXpathExplict("//tbody//td[.='16']");
-	Thread.sleep(1000);
+
 	clickByXpathExplict(prop.getProperty("select.calendar.year1.xpath"));
-	Thread.sleep(1000);
+	
 	clickByXpathExplict(prop.getProperty("select.calendar.year2.xpath"));
-	Thread.sleep(1000);
+	
 	clickByXpathExplict(prop.getProperty("select.calendar.year3.xpath"));
-	Thread.sleep(1000);
+	
 	clickByXpathExplict(prop.getProperty("select.calendar.year4.xpath"));
 	clickByXpathExplict(prop.getProperty("select.calendar.year5.xpath"));
-	Thread.sleep(1000);
+
 
 	clickByXpathExplict(prop.getProperty("select.calendar.month.xpath"));
 	clickByXpathExplict(prop.getProperty("select.calendar.day.xpath"));
