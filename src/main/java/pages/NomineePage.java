@@ -38,24 +38,22 @@ public class NomineePage  extends ProjectWrapp{
 
 		String Mobnumber= regvalue(Mobno);
 		String Pincode = regvalue(Zip);
-		
-		
-		
+			
 	enterByXpathExplict(prop.getProperty("enter.nominee.name.xpath"),NomineeName);
 	clickByXpathExplict(prop.getProperty("click.dob.xpath"));
 	//clickByXpathExplict("//tbody//td[.='16']");
 	Thread.sleep(1000);
-	clickByXpathExplict("(.//th[contains(text(),'2021')])[1]");
+	clickByXpathExplict(prop.getProperty("select.calendar.year1.xpath"));
 	Thread.sleep(1000);
-	clickByXpathExplict("(.//th[contains(text(),'2021')])[2]");
+	clickByXpathExplict(prop.getProperty("select.calendar.year2.xpath"));
 	Thread.sleep(1000);
-	clickByXpathExplict("(.//th[contains(text(),'2020')])[1]");
+	clickByXpathExplict(prop.getProperty("select.calendar.year3.xpath"));
 	Thread.sleep(1000);
-	clickByXpathExplict("(.//span[text()='1990'])[1]");
-	clickByXpathExplict("(.//span[text()='1990'])[1]");
+	clickByXpathExplict(prop.getProperty("select.calendar.year4.xpath"));
+	clickByXpathExplict(prop.getProperty("select.calendar.year5.xpath"));
 	Thread.sleep(1000);
-	clickByXpathExplict(".//span[text()='Jan']");
-	clickByXpathExplict("(.//td[text()='1'])[1]");
+	clickByXpathExplict(prop.getProperty("select.calendar.month.xpath"));
+	clickByXpathExplict(prop.getProperty("select.calendar.day.xpath"));
 	SelectDropdownByIndex(1,relation,1);
 	
 	enterByXpathExplict(prop.getProperty("enter.Nominee.mobno.xpath"),Mobnumber);
