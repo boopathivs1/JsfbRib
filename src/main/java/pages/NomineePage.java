@@ -44,6 +44,26 @@ VerifyElementPresent(".//h3[contains(text(),'Successfully')]","Amount deposited 
 	
 	
 	
+	public NomineePage VerifyOpenFDNonCummulativeDeposit() throws InterruptedException{
+		
+		pageScrollup();
+	     
+		VerifyElementPresent(prop.getProperty("verify.opendeposit.xpath"), "FD NOn Cummulatitive deposit opened successfully", "FD NOn Cummulatitive deposit was not opened ");
+		
+		clickByXpathExplict(prop.getProperty("click.success.okbtn.xpath"));
+		return this;
+			}
+	
+	public NomineePage VerifyOpenFDCummulativeDeposit() throws InterruptedException{
+	     
+		pageScrollup();
+		VerifyElementPresent(prop.getProperty("verify.opendeposit.xpath"), "FD Cummulatitive deposit opened successfully", "FD Cummulatitive deposit was not opened ");
+		
+		clickByXpathExplict(prop.getProperty("click.success.okbtn.xpath"));
+		return this;
+			}
+	
+	
 	public NomineePage FillNomineeForm(String NomineeName,String relation,String Mobno,String address,String Zip) throws InterruptedException
 	{
 
@@ -66,11 +86,6 @@ VerifyElementPresent(".//h3[contains(text(),'Successfully')]","Amount deposited 
 
 	clickByXpathExplict(prop.getProperty("select.calendar.month.xpath"));
 	clickByXpathExplict(prop.getProperty("select.calendar.day.xpath"));
-
-//	clickByXpathExplict(".//span[text()='Jan']");
-	//clickByXpathExplict("(.//td[text()='1'])[1]");
-	
-	
 
 	SelectDropdownByIndex(1,relation,1);
 	
