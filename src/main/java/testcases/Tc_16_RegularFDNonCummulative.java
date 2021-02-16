@@ -9,16 +9,16 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.JSFB_LoginPage;
 import wrappers.ProjectWrapp;
-public class Tc_15_RegularFDNonCummulative  extends ProjectWrapp {
+public class Tc_16_RegularFDNonCummulative  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC15";
+		testCaseName="TC16";
 		testDescription="RegularFDNonCummulative";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC15";
+		testKeyword="TC16";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 
