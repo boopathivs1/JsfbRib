@@ -17,7 +17,7 @@ public class Tc_23_SeniorFD_Manage_Deposit  extends ProjectWrapp {
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
-		authors="Sreejith";
+		authors="Boopathi";
 		testKeyword="TC23";
 		LogoutStatus=true;	
 		usertype="CIBUser";

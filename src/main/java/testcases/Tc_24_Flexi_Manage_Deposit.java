@@ -17,7 +17,7 @@ public class Tc_24_Flexi_Manage_Deposit  extends ProjectWrapp {
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
-		authors="Sreejith";
+		authors="Boopathi";
 		testKeyword="TC24";
 		LogoutStatus=true;	
 		usertype="CIBUser";

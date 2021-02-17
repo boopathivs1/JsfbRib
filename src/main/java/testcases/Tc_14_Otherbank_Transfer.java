@@ -13,7 +13,7 @@ public class Tc_14_Otherbank_Transfer  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC14";
-		testDescription="Otherbank_Transfer";
+		testDescription="Other bank_Transfer -IMPS";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
@@ -33,7 +33,7 @@ public class Tc_14_Otherbank_Transfer  extends ProjectWrapp {
 	.clickfundtrans()
 	.clickInitiatetrans()
 	.clickOtherPayeeTab()
-	.submitOtherbankAccForm( accno,name,amount, remarks)
+	.submitOtherbankAccForm( accno,name,amount, remarks,"IMPS")
 	.otpVerify(otp)
 	.clickOkTransfer()
 	.clickTransferHistory()

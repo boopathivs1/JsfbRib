@@ -17,7 +17,7 @@ public class Tc_21_CloseFD_NonCummulative_Manage_Deposit  extends ProjectWrapp {
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
-		authors="Sreejith";
+		authors="Boopathi";
 		testKeyword="TC21";
 		LogoutStatus=true;	
 		usertype="CIBUser";

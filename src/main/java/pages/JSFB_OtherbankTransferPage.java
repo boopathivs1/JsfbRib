@@ -17,7 +17,7 @@ public class JSFB_OtherbankTransferPage extends ProjectWrapp{
 	
 	
 
-	public JSFB_OtherbankTransferPage submitOtherbankAccForm(String accno,String name ,String amount,String remarks)  throws InterruptedException{
+	public JSFB_OtherbankTransferPage submitOtherbankAccForm(String accno,String name ,String amount,String remarks,String transmode)  throws InterruptedException{
 		String amt=regvalue(amount);
 		String accnum=regvalue(accno);
 	
@@ -26,6 +26,19 @@ public class JSFB_OtherbankTransferPage extends ProjectWrapp{
 		AccountBalance=getTextByXpath(prop.getProperty("getbalance.xpath"));
 System.out.println(AccountBalance);
 		enterByXpathExplict(prop.getProperty("click.otherbank.amount.xpath"),amt);
+		
+		if(transmode.equalsIgnoreCase("NEFT")){
+			clickByXpathExplict(".//label[text()='"+transmode+"']");
+			
+
+			
+		}else if(transmode.equalsIgnoreCase("RTGS")){
+			clickByXpathExplict(".//label[text()='"+transmode+"']");
+
+		}
+		
+		
+		
 enterByXpathExplict(prop.getProperty("click.otherbank.remark.xpath"),remarks);
 clickByXpathExplict(prop.getProperty("click.ownacc.submit.xpath"));
 clickByXpathExplict(prop.getProperty("click.ownacc.confirm.submit.xpath"));
@@ -33,6 +46,10 @@ clickByXpathExplict(prop.getProperty("click.ownacc.confirm.submit.xpath"));
 	     return this;
 	
 	}
+	
+	
+	
+	
 	
 	
 	public JSFB_OtherbankTransferPage otpVerify(String otpnum) throws InterruptedException{				
