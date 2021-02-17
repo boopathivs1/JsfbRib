@@ -29,6 +29,7 @@ public class Tc_03_CASA  extends ProjectWrapp {
 	try{	
 	new JSFB_LoginPage(driver, test)
 	.loginApplication(Username, Password, captcha)
+	.locatingFrames()
 	.clickOverviewButton()
 	.verifyaccSummary();
 	
