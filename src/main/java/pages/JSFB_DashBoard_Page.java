@@ -36,6 +36,13 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 			return new BillPaymentPage(driver, test);
 		}
 	
+	public Form15Page ClickForm15() throws InterruptedException{
+		
+		   clickByXpathExplict(prop.getProperty("click.form15.xpath"));
+
+			return new Form15Page(driver, test);
+		}
+	
 	
 	public JSFB_DashBoard_Page locatingFrames() throws InterruptedException{
 		

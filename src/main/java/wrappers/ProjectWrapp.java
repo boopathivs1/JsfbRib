@@ -123,12 +123,6 @@ public void beforeMethods(String Browser) throws IOException{
 	
 	
 	
-	
-
-	
-	
-	
-	
 	@DataProvider(name="fetch")
 	public Object[][] getDataExcel() throws IOException{
 		return Dataproviders.geta("./data/"+dataSheetName+".xlsx",testKeyword);		

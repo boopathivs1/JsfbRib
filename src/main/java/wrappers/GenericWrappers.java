@@ -2063,6 +2063,26 @@ reportStep("The element with xpath: "+xpathVal+" is clicked.", "PASS");
 		}
 
 
+public void clickByXpathvalue(String xpathVal) throws InterruptedException {
+
+
+	WebDriverWait wait;
+	try{	
+
+wait = new WebDriverWait(driver,60);
+WebElement element=wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpathVal)));
+System.out.println(element+"element will click");	
+element.click();
+
+reportStep("The element with xpath: "+xpathVal+" is clicked.", "PASS");
+
+	
+	} 	
+	catch (Exception e) {
+		reportStep("The element with xpath: "+xpathVal+" could not be clicked.Because Element not found Exception has occured", "FAIL");
+		
+	}
+}
 
 
 
@@ -2418,6 +2438,35 @@ System.out.println(e);
 		}
 	}
 
+	public void enterByXpathvalue(String xpathVal, String data)    {
+					
+			WebDriverWait wait;
+			try{
+				Thread.sleep(2000);
+				 wait = new WebDriverWait(driver,41);
+
+				 
+				WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathVal)));
+				element.clear();
+				element.sendKeys(data);
+				
+				reportStep("The element with xpath: "+xpathVal+" is entered.", "PASS");
+			}
+			
+			
+			catch (Exception e) {
+			
+				
+				//	reportStep("The data: "+xpathVal+" could not be entered in the field :"+xpathVal, "FAIL");
+	System.out.println(e);
+					reportStep("The data: "+xpathVal+" could not be entered in the field.Because No suchelement exception has occured :", "FAIL");
+
+			}
+		}
+
+	
+	
+	
 	public void fileUploadByXpathExplict(String xpathVal, String data) {
 	//	WebDriverWait wait;
 		try{
