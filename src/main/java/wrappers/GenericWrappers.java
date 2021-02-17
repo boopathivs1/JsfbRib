@@ -3122,32 +3122,27 @@ public void VerifyElementnotPresent(String xpath,String validmsg,String Errorval
 
 	}
 	
-	else {
-				reportStep("Element is not present" +validmsg , "PASS");
-
-	}
+//	else {
+//				reportStep("Element is not present" +validmsg , "PASS");
+//
+//	}
 	
 	
-	}
-	catch ( TimeoutException  e) {
-		reportStep("Timeout Exception has occured", "FAIL");
-
-		// TODO: handle exception
 	}
 	catch ( NoSuchElementException  e) {
-		reportStep(   "Element not fount" +ErrorvalidMsg , "PASS");
+		reportStep( validmsg , "PASS");
 
 		// TODO: handle exception
 	}
 	catch ( ElementNotVisibleException  e) {
-		reportStep("Element not fount" +ErrorvalidMsg , "PASS");
+		reportStep(validmsg, "PASS");
 
 		// TODO: handle exception
 	}
 	
 	
 	catch (Exception e) {
-		reportStep("Unknown exception occured ", "FAIL");
+		reportStep(validmsg, "PASS");
 	}
 
 }

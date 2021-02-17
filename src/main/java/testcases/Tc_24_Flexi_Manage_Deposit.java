@@ -13,7 +13,7 @@ public class Tc_24_Flexi_Manage_Deposit  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC24";
-		testDescription="CloseFD_NonCummulative Manage Deposit";
+		testDescription="Close Flexi_Manage_Deposit";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";

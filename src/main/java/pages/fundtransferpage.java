@@ -51,10 +51,12 @@ public class fundtransferpage  extends ProjectWrapp{
 	}			
 	
 	public fundtransferpage clickjanabankpayee(String janaPayeeNickname) throws InterruptedException{
-		scrolltoelementJs("(.//table[@aria-describedby='DataTables_Table_1_info']//input[contains(@value,'~Active~"+janaPayeeNickname+"')]/following::label)[1]");
+		
+		
+		scrolltoelementJs("(.//table[@aria-describedby='DataTables_Table_1_info']//input[contains(@value,'"+janaPayeeNickname+"')]/following::label)[1]");
 
 		
-		clickByXpathExplict("(.//table[@aria-describedby='DataTables_Table_1_info']//input[contains(@value,'~Active~"+janaPayeeNickname+"')]/following::label)[1]");
+		clickByXpathExplict("(.//table[@aria-describedby='DataTables_Table_1_info']//input[contains(@value,'"+janaPayeeNickname+"')]/following::label)[1]");
 	
 			return this;
 		}			
@@ -82,9 +84,9 @@ VerifyElementnotPresent("(.//input[contains(@value,'EXTSUBMOD~"+otherpayeenickna
 	
 public fundtransferpage verifyJanaBeneficiaryDeletion(String otherpayeenickname) throws InterruptedException{
 
-VerifyElementnotPresent("(.//table[@aria-describedby='DataTables_Table_1_info']//input[contains(@value,'~Active~"+otherpayeenickname+"')]/following::label)[1]","Beneficiary has deleted successfully","Beneficiary has not deleted successfully");
+VerifyElementnotPresent("(.//table[@aria-describedby='DataTables_Table_1_info']//input[contains(@value,'"+otherpayeenickname+"')]/following::label)[1]","Beneficiary has deleted successfully","Beneficiary has not deleted successfully");
 	     
-	     
+     
 		return this;
 	}			
 	
@@ -137,7 +139,7 @@ VerifyElementnotPresent("(.//table[@aria-describedby='DataTables_Table_1_info']/
 	
 	public OtherBank_AddPayee clickotherpayee() throws InterruptedException{
 		
-//	     clickByXpathExplict(prop.getProperty("click.otherpayee.xpath"));
+     clickByXpathExplict(prop.getProperty("click.otherpayee.xpath"));
 
 		return new OtherBank_AddPayee(driver, test);
 	}	
