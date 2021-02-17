@@ -44,7 +44,7 @@ public class Tc_09_JanaPayeeDelete  extends ProjectWrapp {
 	
 	
 	
-		logout(true);
+		logout(false);
 	
 	
 	

@@ -15,18 +15,27 @@ public class TransferHistoryPage  extends ProjectWrapp{
 	public TransferHistoryPage filterTransHistory(String accno,String amountRange) throws InterruptedException {
 	String accnum=regvalue(accno);
 	String AmtRange=regvalue(amountRange);
-	clickByXpathExplict(".//input[@id='fromDate']");
-	clickByXpathExplict(".//td[contains(@class,'active')]//preceding::td[1]");
-	clickByXpathExplict(".//input[@id='toDate']");
-	clickByXpathExplict(".//td[contains(@class,'active')]");
-	clickByXpathExplict("(.//div[@class='ui dropdown selection'])[1]");
+	
+	clickByXpathExplict(prop.getProperty("click.fromdate.text.xpath"));
+	clickByXpathExplict(prop.getProperty("select.lastdate.trans.xpath"));
+	clickByXpathExplict(prop.getProperty("click.todate.text.xpath"));
+	clickByXpathExplict(prop.getProperty("click.futuredate.xpath"));
+	
+	
+	clickByXpathExplict(prop.getProperty("select.fromacc.transhistory.xpath"));
 	clickByXpathExplict(".//div[text()='"+accnum+"']");
 	
-	clickByXpathExplict(".//div[text()='Select Range']");
+	
+	clickByXpathExplict(prop.getProperty("click.select.trans.range.xpath"));	
+	
+	clickByXpathExplict(prop.getProperty("click.amountrange.transhistory.xpath"));
+
 	
 	
-	clickByXpathExplict(".//div[text()='1-5000']");
-	clickByXpathExplict(".//button[@id='ftHistorySubmit']");
+	clickByXpathExplict(prop.getProperty("click.submit.transhistory.xpath"));
+	
+	
+	
 	
 	return this;
 	}

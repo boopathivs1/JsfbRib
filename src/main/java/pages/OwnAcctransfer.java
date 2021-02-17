@@ -24,10 +24,10 @@ String fromaccnum=regvalue(fromacc);
 		clickByXpathExplict(prop.getProperty("click.ownacc.jana.links.xpath"));
 		clickByXpathExplict(".//td[text()='"+accnum+"']//preceding::a[@id='"+accidnum+"']");
 
-		clickByXpathExplict(".//div[@class='ui dropdown selection']");
-		clickByXpathExplict("(.//div[text()='"+fromaccnum+"'])[2]");
+//		clickByXpathExplict(".//div[@class='ui dropdown selection']");
+	//	clickByXpathExplict("(.//div[text()='"+fromaccnum+"'])[2]");
 
-		
+		dropdownSelectionbyindex(1,fromaccnum);
 		AccountBalance=getTextByXpath(prop.getProperty("getbalance.xpath"));
 System.out.println(AccountBalance);
 		enterByXpathExplict(prop.getProperty("enter.txtamt.xpath"),amt);

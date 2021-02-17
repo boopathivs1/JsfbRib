@@ -13,7 +13,7 @@ public class Tc_22_RD_Manage_Deposit  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC22";
-		testDescription="CloseFD_NonCummulative Manage Deposit";
+		testDescription="Close Recurring Deposit";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
