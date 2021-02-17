@@ -9,16 +9,16 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import pages.JSFB_LoginPage;
 import wrappers.ProjectWrapp;
-public class Tc_21_CloseFD_NonCummulative  extends ProjectWrapp {
+public class Tc_23_SeniorFD_Manage_Deposit  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC21";
-		testDescription="CloseFD_NonCummulative";
+		testCaseName="TC23";
+		testDescription="CloseFD_NonCummulative Manage Deposit";
 		browserName="Chrome";
 		dataSheetName="JSFBTestData";
 		category="Regression";
 		authors="Sreejith";
-		testKeyword="TC21";
+		testKeyword="TC23";
 		LogoutStatus=true;	
 		usertype="CIBUser";
 
