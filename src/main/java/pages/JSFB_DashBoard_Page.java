@@ -29,6 +29,13 @@ public class JSFB_DashBoard_Page extends ProjectWrapp{
 	}
 	
 	
+	public BillPaymentPage ClickBillpay() throws InterruptedException{
+		
+		   clickByXpathExplict(prop.getProperty("click.billpay.xpath"));
+
+			return new BillPaymentPage(driver, test);
+		}
+	
 	
 	public JSFB_DashBoard_Page locatingFrames() throws InterruptedException{
 		
