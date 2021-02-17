@@ -19,6 +19,21 @@ public class Jana_taxsaver_deposit  extends ProjectWrapp{
 		return  new NomineePage(driver, test);
 	}
 	
+	public NomineePage SelectNoNominee() throws InterruptedException
+	{
+		pageScrollup();
+		clickByXpathExplict(prop.getProperty("click.no.nominee.radio.xpath"));
+		clickByXpathExplict(prop.getProperty("click.nonominee.next.xpath"));
+		clickByXpathExplict(prop.getProperty("click.nonominee.confirm.xpath"));
+		
+		
+		
+		return  new NomineePage(driver, test);
+	}
+	
+	
+	
+	
 	public Jana_taxsaver_deposit filltaxsaver(String sourceaccno,String amount,String toaacno ) throws InterruptedException{
 		
 		dropdownSelectionbyindex(1,sourceaccno);
