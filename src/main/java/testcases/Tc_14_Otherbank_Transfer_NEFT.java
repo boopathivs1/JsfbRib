@@ -24,7 +24,7 @@ public class Tc_14_Otherbank_Transfer_NEFT  extends ProjectWrapp {
 
 	}
 	@Test(groups={"sanity"},dataProvider="fetch")
-	public void DEpositOverview(String casename,String Username,String Password,String captcha,String accno,String name,String amount,String remarks,String otp,String fromacc,String amountRange,String param6,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
+	public void DEpositOverview(String casename,String Username,String Password,String captcha,String accno,String name,String fromacc,String amount,String remarks,String otp,String amountRange,String param6,String param8,String param9,String param10,String para11,String param12,String param13,String param14,String param15,String param16) throws Exception{
 		try{	
 
 	new JSFB_LoginPage(driver, test)
@@ -33,7 +33,7 @@ public class Tc_14_Otherbank_Transfer_NEFT  extends ProjectWrapp {
 	.clickfundtrans()
 	.clickInitiatetrans()
 	.clickOtherPayeeTab()
-	.submitOtherbankAccForm( accno,name,amount, remarks,"NEFT")
+	.submitOtherbankAccForm( accno,name,fromacc,amount, remarks,"NEFT")
 	.otpVerify(otp)
 	.clickOkTransfer()
 	.clickTransferHistory()

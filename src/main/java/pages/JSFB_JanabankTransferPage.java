@@ -22,11 +22,17 @@ public class JSFB_JanabankTransferPage extends ProjectWrapp{
 	
 	
 	
-	public JSFB_JanabankTransferPage submitJanaAccForm(String accno,String name ,String amount,String remarks) throws InterruptedException{
+	public JSFB_JanabankTransferPage submitJanaAccForm(String accno,String name ,String Fromacc,String amount,String remarks) throws InterruptedException{
 		String amt=regvalue(amount);
 		String accnum=regvalue(accno);
+		String Fromaccount=regvalue(Fromacc);
 	
 		clickByXpathExplict("//td[.='"+accnum+"']//preceding::a[contains(.,'"+name+"')]");
+		
+		clickByXpathvalue(prop.getProperty("click.fromacc.dropdown.xpath"));
+		 
+		clickByXpathvalue("//div[@class='item active selected'][.='"+Fromaccount+"']");
+
 
 		AccountBalance=getTextByXpath(prop.getProperty("getbalance.xpath"));
 System.out.println(AccountBalance);
