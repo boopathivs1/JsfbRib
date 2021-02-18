@@ -46,8 +46,7 @@ try{
 	.SelectNoNominee()
 	.SubmitOTP(otpnum)
 	.verifyDepositsuccess();
-	//.clickDepositMenu()
-	//.clickManageDeposit();
+	
 	
 	
 	logout(false);
