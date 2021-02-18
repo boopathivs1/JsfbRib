@@ -14,6 +14,38 @@ public class RegularFDNoncummulativePage  extends ProjectWrapp{
 	
 	
 	
+public RegularFDNoncummulativePage fillJanaRecurring(String sourceaccno,String amount,String deposit_frequency_month,String deposit_frequency_year,String tensure_month,String toaacno ) throws InterruptedException{
+		
+		dropdownSelectionbyindex(1,sourceaccno);
+		
+		
+		enterByXpathExplict(prop.getProperty("enter.deposit.amount.xpath"),amount);
+				//deposit frequency
+		
+		dropdownSelectionbyindex(2,deposit_frequency_month);
+		
+		dropdownSelectionbyindex(3,deposit_frequency_year);
+		
+
+		dropdownSelectionbyindex(4,tensure_month);
+		dropdownSelectionbyindex(5,toaacno);
+		
+		clickByXpathExplict(prop.getProperty("click.deposit.confirmdetails.xpath"));
+			
+		return this;
+	}
+
+public NomineePage SelectNoNominee() throws InterruptedException
+{
+pageScrollup();
+	clickByXpathExplict(prop.getProperty("click.no.nominee.radio.xpath"));
+	clickByXpathExplict(prop.getProperty("click.nonominee.next.xpath"));
+	clickByXpathExplict(prop.getProperty("click.nonominee.confirm.xpath"));
+	
+	
+	
+	return  new NomineePage(driver, test);
+}
 	
 	
 	
