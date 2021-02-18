@@ -4,40 +4,73 @@
     <test name="Test" thread-count="1" parallel="false">
     <classes>
 
-      <class name="testcases.Tc_93"/>
-      <class name="testcases.Tc_94"/>
-      <class name="testcases.Tc_95"/>
-      <class name="testcases.Tc_96"/>
-      <class name="testcases.Tc_97"/>
-      <class name="testcases.Tc_98"/>
-      <class name="testcases.Tc_99"/>
-      <class name="testcases.Tc_100"/>
-      <class name="testcases.Tc_101"/>
-      <class name="testcases.Tc_102"/>
-      <class name="testcases.Tc_103"/>
-     
-   <class name="testcases.Tc_104"/>
-      <class name="testcases.Tc_105"/>
-      <class name="testcases.Tc_106"/>
-      <class name="testcases.Tc_107"/>
-      <class name="testcases.Tc_108"/>
-      <class name="testcases.Tc_109"/>
-      <class name="testcases.Tc_110"/>
-      <class name="testcases.Tc_111"/>
-      <class name="testcases.Tc_112"/>
-      <class name="testcases.Tc_113"/>
-      <class name="testcases.Tc_114"/>
-      <class name="testcases.Tc_115"/>
-      <class name="testcases.Tc_116"/>
-      <class name="testcases.Tc_117"/>
-      <class name="testcases.Tc_118"/>
-      <class name="testcases.Tc_119"/>
-    
-      <class name="testcases.Tc_120"/>
-    
-   <class name="testcases.Tc_121"/>
-      <class name="testcases.Tc_122"/> 
+<class name="testcases.Tc_1_Register"/>
+   
+      <class name="testcases.Tc_03_CASA"/>
+      <class name="testcases.Tc_04_Verify_Deposit_Overview"/>
+      <class name="testcases.Tc_05_Verify_Loan_Overview"/>
+         <class name="testcases.Tc_06_Favourite_Transaction"/>
+   
+      <class name="testcases.Tc_07_Loan_Statement"/>
+      <class name="testcases.Tc_08_AddPayee_JanaBank"/>
+
+      <class name="testcases.Tc_09_JanaPayeeDelete"/>
+
+      <class name="testcases.Tc_10_OtherBankAddPayee"/>
+
+      <class name="testcases.Tc_011_OtherBankDeletePayee"/>
+
+      <class name="testcases.Tc_12_Own_Transfer"/>
+      <class name="testcases.Tc_13_JanaBanKTransfer"/>
+
+      <class name="testcases.Tc_14_Otherbank_Transfer"/>
+
+      <class name="testcases.Tc_15_RegularFDCummulative"/>
+
+
+
+      <class name="testcases.Tc_16_RegularFDNonCummulative"/>
+      <class name="testcases.Tc_17_Jana_Recurring_Deposit"/>
+
+      <class name="testcases.Tc_18_college_investment_plan_regular"/>
+      <class name="testcases.Tc_19_tax_saver_fd_cumulative"/>
+
+      <class name="testcases.Tc_20_CloseFD_Cummulative_Manage_Deposit"/>
+
+
+      <class name="testcases.Tc_25_ViewStatement"/>
+
+
+
+
+
+      <class name="testcases.Tc_31_DownloadForm15"/>
+
+      <class name="testcases.Tc_32_Update_Email"/>
+
+
+
+     <class name="testcases.Tc_35_BillPaymentElectricity"/>
  
+    <class name="testcases.Tc_36_BillPaymentGas"/>
+ 
+    <class name="testcases.Tc_37_FD_Cummulative_No_Nominee"/>
+ 
+    <class name="testcases.Tc_38_Jana_Recurring_No_Nominee"/>
+ 
+     <class name="testcases.Tc_39_college_investment_plan_No_Nominee"/>
+ 
+ 
+
+
+
+ 
+
+     <class name="testcases.Tc_40_tax_saver_fd_No_Nominee"/>
+
+      <class name="testcases.Tc_41_FD_NonCummulative_No_Nominee"/>
+
+
               </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
